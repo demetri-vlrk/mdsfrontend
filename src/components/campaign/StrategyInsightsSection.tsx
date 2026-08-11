@@ -25,7 +25,7 @@ export function StrategyInsightsSection() {
       <SectionHeader title="Strategy & Insights" />
 
       <div className="flex w-full items-stretch">
-        <div className="relative flex flex-1 flex-col items-start gap-6 overflow-hidden border border-border p-6">
+        <div className="relative flex flex-1 flex-col items-start gap-6 border border-border p-6">
           <CardHeading icon={Package} title="Proposition" />
           <img
             src={propositionGlow}
