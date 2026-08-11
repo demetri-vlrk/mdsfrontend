@@ -23,7 +23,6 @@ export function SectionHeader({
         )}
       </div>
       <div className="flex shrink-0 items-center gap-4">
-        {children}
         <button
           type="button"
           className="flex items-center gap-1 text-sm font-semibold text-primary hover:opacity-80"
@@ -31,6 +30,7 @@ export function SectionHeader({
           View All
           <ArrowRight className="size-4" />
         </button>
+        {children}
       </div>
     </div>
   );

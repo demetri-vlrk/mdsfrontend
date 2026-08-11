@@ -1,6 +1,6 @@
 import { Box, Check, Sparkles, ChartSpline } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { SectionHeader } from "./SectionHeader";
+import { SectionHeader } from "../SectionHeader";
 
 type Stat = {
   icon: LucideIcon;

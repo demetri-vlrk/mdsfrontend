@@ -1,5 +1,5 @@
 import { Plus, ArrowRight } from "lucide-react";
-import { SectionHeader } from "./SectionHeader";
+import { SectionHeader } from "../SectionHeader";
 import { ProjectCard } from "../ProjectCard";
 
 const PROJECTS = [

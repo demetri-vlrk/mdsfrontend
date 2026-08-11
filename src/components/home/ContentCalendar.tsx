@@ -1,4 +1,4 @@
-import { SectionHeader } from "./SectionHeader";
+import { SectionHeader } from "../SectionHeader";
 
 const DAYS = [
   { label: "M", date: "12" },

@@ -1,4 +1,4 @@
-import { SectionHeader } from "./SectionHeader";
+import { SectionHeader } from "../SectionHeader";
 import { CreditUsageChart } from "./CreditUsageChart";
 
 const MONTHS = ["Mar", "Apr", "May", "Jun", "Jul", "Aug"];

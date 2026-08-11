@@ -6,14 +6,21 @@ const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 export function CircularProgress({
   percent,
   label,
+  topLabel,
+  bottomLabel,
 }: {
   percent: number;
-  label: string;
+  label?: string;
+  topLabel?: string;
+  bottomLabel?: string;
 }) {
   const offset = CIRCUMFERENCE * (1 - percent / 100);
 
   return (
     <div className="flex flex-col items-center gap-3 p-3">
+      {topLabel && (
+        <p className="text-xs text-muted-foreground">{topLabel}</p>
+      )}
       <div className="relative size-[97.719px]">
         <svg
           viewBox={`0 0 ${SIZE} ${SIZE}`}
@@ -44,7 +51,10 @@ export function CircularProgress({
           {percent}%
         </p>
       </div>
-      <p className="text-sm text-foreground">{label}</p>
+      {label && <p className="text-sm text-foreground">{label}</p>}
+      {bottomLabel && (
+        <p className="text-sm font-bold text-foreground">{bottomLabel}</p>
+      )}
     </div>
   );
 }

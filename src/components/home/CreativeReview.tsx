@@ -1,4 +1,4 @@
-import { SectionHeader } from "./SectionHeader";
+import { SectionHeader } from "../SectionHeader";
 import creativeThumb from "../../assets/creative-thumb.png";
 
 type ReviewItem = {
