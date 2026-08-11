@@ -27,18 +27,20 @@ export function StrategyInsightsSection() {
       <div className="flex w-full items-stretch">
         <div className="relative flex flex-1 flex-col items-start gap-6 overflow-hidden border border-border p-6">
           <CardHeading icon={Package} title="Proposition" />
-          <img
-            src={propositionGlow}
-            alt=""
-            aria-hidden
-            className="pointer-events-none absolute top-1/2 right-24 h-[700px] w-[700px] -translate-y-1/2 mix-blend-plus-lighter"
-          />
-          <img
-            src={chessPiece}
-            alt=""
-            aria-hidden
-            className="pointer-events-none absolute top-6 right-0 h-[394px] w-auto mix-blend-lighten"
-          />
+          <div className="pointer-events-none absolute top-6 right-0 h-[394px] w-[353px]">
+            <img
+              src={propositionGlow}
+              alt=""
+              aria-hidden
+              className="absolute top-1/2 left-1/2 h-[650px] w-[650px] -translate-x-1/2 -translate-y-1/2 mix-blend-plus-lighter"
+            />
+            <img
+              src={chessPiece}
+              alt=""
+              aria-hidden
+              className="relative h-full w-full mix-blend-lighten"
+            />
+          </div>
           <div className="relative flex max-w-[480px] flex-col gap-1">
             <p className="max-w-[410px] text-5xl leading-[48px] font-semibold tracking-[-1.5px] text-foreground">
               Single-Minded Proposition
