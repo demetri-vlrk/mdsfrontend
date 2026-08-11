@@ -5,15 +5,20 @@ export function GalleryImageCard({
   label,
   isHero = false,
   className = "",
+  onImageClick,
 }: {
   image: string;
   label: string;
   isHero?: boolean;
   className?: string;
+  onImageClick?: () => void;
 }) {
   return (
     <div
-      className={`relative flex w-full flex-col items-start justify-end overflow-hidden border border-border p-6 ${className}`}
+      onClick={onImageClick}
+      role={onImageClick ? "button" : undefined}
+      tabIndex={onImageClick ? 0 : undefined}
+      className={`relative flex w-full flex-col items-start justify-end overflow-hidden border border-border p-6 ${onImageClick ? "cursor-pointer" : ""} ${className}`}
     >
       <img
         src={image}
@@ -33,6 +38,7 @@ export function GalleryImageCard({
           <button
             type="button"
             aria-label="Edit tags"
+            onClick={(e) => e.stopPropagation()}
             className="flex min-h-9 items-center justify-center rounded-full border border-white/80 bg-white/10 px-3 py-2 text-foreground shadow-xs hover:bg-white/20"
           >
             <Tag className="size-4" />
@@ -41,6 +47,7 @@ export function GalleryImageCard({
         <button
           type="button"
           aria-label="Delete image"
+          onClick={(e) => e.stopPropagation()}
           className="flex size-6 shrink-0 items-center justify-center text-foreground hover:text-destructive"
         >
           <Trash2 className="size-6" />

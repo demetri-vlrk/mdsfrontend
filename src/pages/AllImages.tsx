@@ -7,6 +7,7 @@ import { UtilityRail } from "../components/home/UtilityRail";
 import { ChatPanel } from "../components/chat/ChatPanel";
 import { GalleryImageCard } from "../components/gallery/GalleryImageCard";
 import { AddImagesCard } from "../components/gallery/AddImagesCard";
+import { EditImageModal } from "../components/gallery/EditImageModal";
 import gallery1 from "../assets/gallery-1.png";
 import gallery2 from "../assets/gallery-2.png";
 import gallery3 from "../assets/gallery-3.png";
@@ -19,8 +20,27 @@ import gallery9 from "../assets/gallery-9.png";
 
 const FILTERS = ["Hero image", "Scale reference", "Ingredients", "Tagged"];
 
+const COLUMNS = [
+  [
+    { image: gallery1, label: "Hero Image", isHero: true, className: "h-[410px]" },
+    { image: gallery2, label: "Hero Image", isHero: true, className: "h-[415px]" },
+    { image: gallery3, label: "Hero image", isHero: true, className: "h-[550px]" },
+  ],
+  [
+    { image: gallery4, label: "Scale Reference", isHero: false, className: "h-[515px]" },
+    { image: gallery5, label: "Hero image", isHero: true, className: "h-[555px]" },
+    { image: gallery6, label: "Hero image", isHero: true, className: "h-[555px]" },
+  ],
+  [
+    { image: gallery7, label: "Ingredient", isHero: false, className: "h-[559px]" },
+    { image: gallery8, label: "Ingredient", isHero: false, className: "h-[559px]" },
+    { image: gallery9, label: "Ingredient", isHero: false, className: "h-[559px]" },
+  ],
+];
+
 export function AllImages() {
   const [isChatOpen, setIsChatOpen] = useState(false);
+  const [editingImage, setEditingImage] = useState<{ image: string; label: string } | null>(null);
 
   return (
     <div className="min-h-svh bg-background">
@@ -79,27 +99,35 @@ export function AllImages() {
           </div>
 
           <div className="flex w-full items-start">
-            <div className="flex flex-1 flex-col items-stretch">
-              <GalleryImageCard image={gallery1} label="Hero Image" isHero className="h-[410px]" />
-              <GalleryImageCard image={gallery2} label="Hero Image" isHero className="h-[415px]" />
-              <GalleryImageCard image={gallery3} label="Hero image" isHero className="h-[550px]" />
-            </div>
-            <div className="flex flex-1 flex-col items-stretch">
-              <GalleryImageCard image={gallery4} label="Scale Reference" className="h-[515px]" />
-              <GalleryImageCard image={gallery5} label="Hero image" isHero className="h-[555px]" />
-              <GalleryImageCard image={gallery6} label="Hero image" isHero className="h-[555px]" />
-              <AddImagesCard className="h-[338px]" />
-            </div>
-            <div className="flex flex-1 flex-col items-stretch">
-              <GalleryImageCard image={gallery7} label="Ingredient" className="h-[559px]" />
-              <GalleryImageCard image={gallery8} label="Ingredient" className="h-[559px]" />
-              <GalleryImageCard image={gallery9} label="Ingredient" className="h-[559px]" />
-            </div>
+            {COLUMNS.map((column, colIndex) => (
+              <div key={colIndex} className="flex flex-1 flex-col items-stretch">
+                {column.map((card, i) => (
+                  <GalleryImageCard
+                    key={i}
+                    image={card.image}
+                    label={card.label}
+                    isHero={card.isHero}
+                    className={card.className}
+                    onImageClick={() =>
+                      setEditingImage({ image: card.image, label: card.label })
+                    }
+                  />
+                ))}
+                {colIndex === 1 && <AddImagesCard className="h-[338px]" />}
+              </div>
+            ))}
           </div>
         </main>
         {isChatOpen && <ChatPanel onClose={() => setIsChatOpen(false)} />}
         <UtilityRail onChatClick={() => setIsChatOpen(true)} />
       </div>
+      {editingImage && (
+        <EditImageModal
+          image={editingImage.image}
+          label={editingImage.label}
+          onClose={() => setEditingImage(null)}
+        />
+      )}
     </div>
   );
 }
