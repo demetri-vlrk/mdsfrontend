@@ -4,6 +4,7 @@ import { CardHeading } from "./CardHeading";
 import { LinearProgress } from "../LinearProgress";
 import { CircularProgress } from "../CircularProgress";
 import chessPiece from "../../assets/chess-piece.png";
+import propositionGlow from "../../assets/proposition-glow.png";
 
 const LADDER_STEPS = ["Aware", "Interested", "Considering", "Acted", "Advocates"];
 
@@ -26,6 +27,12 @@ export function StrategyInsightsSection() {
       <div className="flex w-full items-stretch">
         <div className="relative flex flex-1 flex-col items-start gap-6 overflow-hidden border border-border p-6">
           <CardHeading icon={Package} title="Proposition" />
+          <img
+            src={propositionGlow}
+            alt=""
+            aria-hidden
+            className="pointer-events-none absolute top-1/2 right-24 h-[700px] w-[700px] -translate-y-1/2 mix-blend-plus-lighter"
+          />
           <img
             src={chessPiece}
             alt=""
