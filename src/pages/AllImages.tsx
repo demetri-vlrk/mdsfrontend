@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ListFilter, MessageSquareText, Plus } from "lucide-react";
 import { TopNav } from "../components/TopNav";
 import { Sidebar } from "../components/Sidebar";
 import { UtilityRail } from "../components/home/UtilityRail";
+import { ChatPanel } from "../components/chat/ChatPanel";
 import { GalleryImageCard } from "../components/gallery/GalleryImageCard";
 import { AddImagesCard } from "../components/gallery/AddImagesCard";
 import gallery1 from "../assets/gallery-1.png";
@@ -18,6 +20,8 @@ import gallery9 from "../assets/gallery-9.png";
 const FILTERS = ["Hero image", "Scale reference", "Ingredients", "Tagged"];
 
 export function AllImages() {
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
   return (
     <div className="min-h-svh bg-background">
       <TopNav />
@@ -58,6 +62,7 @@ export function AllImages() {
             <div className="flex shrink-0 items-center gap-6">
               <button
                 type="button"
+                onClick={() => setIsChatOpen(true)}
                 className="flex min-h-9 items-center justify-center gap-2 bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
               >
                 <MessageSquareText className="size-4" />
@@ -92,7 +97,8 @@ export function AllImages() {
             </div>
           </div>
         </main>
-        <UtilityRail />
+        {isChatOpen && <ChatPanel onClose={() => setIsChatOpen(false)} />}
+        <UtilityRail onChatClick={() => setIsChatOpen(true)} />
       </div>
     </div>
   );
