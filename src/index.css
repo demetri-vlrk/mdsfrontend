@@ -17,10 +17,16 @@
   --color-primary-foreground: #0a0a0a;
   --color-accent: #171717;
   --color-border-strong: #737373;
+  --color-secondary: #262626;
+  --color-secondary-foreground: #f5f5f5;
+  --color-destructive: #9e4042;
+  --color-card: #171717;
+  --color-chart-line: #3f8dff;
 
   --color-sidebar: #0a0a0a;
   --color-sidebar-foreground: #d4d4d4;
   --color-sidebar-muted: #737373;
+  --color-sidebar-accent: #171717;
 
   --color-lime-950: #1a2e05;
   --color-lime-400: #a3e635;

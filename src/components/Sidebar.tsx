@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { House, SquareDashed } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -50,13 +51,13 @@ export function Sidebar() {
 
       <div className="h-4 w-full" />
 
-      <button
-        type="button"
+      <Link
+        to="/home"
         className="flex h-8 w-full items-center gap-2 rounded-md px-3 py-1 text-left text-sm text-sidebar-foreground hover:bg-white/5"
       >
         <House className="size-4 shrink-0" />
         <span className="flex-1">Home</span>
-      </button>
+      </Link>
 
       <div className="h-4 w-full" />
 
