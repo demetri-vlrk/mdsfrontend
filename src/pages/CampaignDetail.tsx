@@ -5,7 +5,7 @@ import { UtilityRail } from "../components/home/UtilityRail";
 import { ProductSetupSection } from "../components/campaign/ProductSetupSection";
 import { BrandDnaSection } from "../components/campaign/BrandDnaSection";
 import { StrategyInsightsSection } from "../components/campaign/StrategyInsightsSection";
-import glowAccent from "../assets/glow-accent.svg";
+import headerGlow from "../assets/campaign-header-glow.png";
 
 export function CampaignDetail() {
   return (
@@ -14,12 +14,12 @@ export function CampaignDetail() {
       <div className="flex">
         <Sidebar />
         <main className="flex min-h-[calc(100svh-4rem)] flex-1 flex-col items-start">
-          <div className="relative flex w-full flex-col items-start overflow-hidden">
+          <div className="relative flex w-full flex-col items-start">
             <img
-              src={glowAccent}
+              src={headerGlow}
               alt=""
               aria-hidden
-              className="pointer-events-none absolute -top-[55%] right-[-15%] w-[55%] max-w-none opacity-60"
+              className="pointer-events-none absolute top-0 right-0 h-[773px] w-auto max-w-none"
             />
             <div className="relative flex w-full items-start gap-6 px-8 py-10">
               <h1 className="flex-1 text-7xl leading-none font-semibold tracking-[-1.5px] text-foreground">
