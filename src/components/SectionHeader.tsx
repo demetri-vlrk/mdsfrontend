@@ -1,15 +1,23 @@
 import { ArrowRight } from "lucide-react";
 import type { ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 export function SectionHeader({
   title,
   badge,
+  showViewAll = true,
+  viewAllHref,
   children,
 }: {
   title: string;
   badge?: string;
+  showViewAll?: boolean;
+  viewAllHref?: string;
   children?: ReactNode;
 }) {
+  const viewAllClassName =
+    "flex items-center gap-1 text-sm font-semibold text-primary hover:opacity-80";
+
   return (
     <div className="flex w-full items-center">
       <div className="flex flex-1 items-center gap-6 min-w-0">
@@ -23,13 +31,18 @@ export function SectionHeader({
         )}
       </div>
       <div className="flex shrink-0 items-center gap-4">
-        <button
-          type="button"
-          className="flex items-center gap-1 text-sm font-semibold text-primary hover:opacity-80"
-        >
-          View All
-          <ArrowRight className="size-4" />
-        </button>
+        {showViewAll &&
+          (viewAllHref ? (
+            <Link to={viewAllHref} className={viewAllClassName}>
+              View All
+              <ArrowRight className="size-4" />
+            </Link>
+          ) : (
+            <button type="button" className={viewAllClassName}>
+              View All
+              <ArrowRight className="size-4" />
+            </button>
+          ))}
         {children}
       </div>
     </div>

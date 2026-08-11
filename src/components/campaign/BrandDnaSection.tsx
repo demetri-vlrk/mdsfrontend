@@ -12,10 +12,18 @@ const FONT_FILES = [
   { name: "Playfair Display", extensions: [".tff", ".woff2"] },
 ];
 
-export function BrandDnaSection() {
+export function BrandDnaSection({
+  title = "Brand DNA",
+  showViewAll = true,
+  viewAllHref,
+}: {
+  title?: string;
+  showViewAll?: boolean;
+  viewAllHref?: string;
+}) {
   return (
     <div className="flex w-full flex-col items-start gap-6 border border-border px-8 py-10">
-      <SectionHeader title="Brand DNA" />
+      <SectionHeader title={title} showViewAll={showViewAll} viewAllHref={viewAllHref} />
 
       <div className="flex w-full items-stretch">
         <div className="flex flex-1 flex-col items-start gap-6 border border-border p-6">

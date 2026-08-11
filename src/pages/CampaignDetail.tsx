@@ -5,13 +5,11 @@ import { UtilityRail } from "../components/home/UtilityRail";
 import { ProductSetupSection } from "../components/campaign/ProductSetupSection";
 import { BrandDnaSection } from "../components/campaign/BrandDnaSection";
 import { StrategyInsightsSection } from "../components/campaign/StrategyInsightsSection";
-import { IconGradientDefs } from "../components/campaign/IconGradientDefs";
 import headerGlow from "../assets/campaign-header-glow.png";
 
 export function CampaignDetail() {
   return (
     <div className="min-h-svh bg-background">
-      <IconGradientDefs />
       <TopNav />
       <div className="flex">
         <Sidebar />
@@ -51,7 +49,7 @@ export function CampaignDetail() {
             </div>
 
             <ProductSetupSection />
-            <BrandDnaSection />
+            <BrandDnaSection viewAllHref="/campaigns/op-1/brand-dna" />
             <StrategyInsightsSection />
           </main>
           <UtilityRail />
