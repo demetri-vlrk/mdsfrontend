@@ -31,7 +31,7 @@ export function StrategyInsightsSection() {
             src={propositionGlow}
             alt=""
             aria-hidden
-            className="pointer-events-none absolute top-0 left-[40%] h-[550px] w-[550px] -translate-x-1/2 -translate-y-1/2 mix-blend-plus-lighter"
+            className="pointer-events-none absolute top-0 left-[40%] h-[320px] w-[320px] -translate-x-1/2 -translate-y-1/2 mix-blend-plus-lighter"
           />
           <img
             src={chessPiece}
