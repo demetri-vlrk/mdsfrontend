@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function MediaCard({
   image,
   title,
@@ -27,9 +29,12 @@ export function MediaCard({
           <span className="flex min-h-6 items-center justify-center rounded-full bg-secondary px-2 py-0.5 text-xs font-medium text-secondary-foreground">
             {badge}
           </span>
-          <span className="flex min-h-6 items-center justify-center rounded-full bg-primary px-4 py-0.5 text-xs text-primary-foreground">
+          <Link
+            to="/campaigns/op-1/images"
+            className="flex min-h-6 items-center justify-center rounded-full bg-primary px-4 py-0.5 text-xs text-primary-foreground hover:bg-primary/90"
+          >
             Edit
-          </span>
+          </Link>
         </div>
       </div>
     </div>
