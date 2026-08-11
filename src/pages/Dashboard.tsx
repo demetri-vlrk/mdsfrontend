@@ -4,6 +4,7 @@ import { Hero } from "../components/Hero";
 import { ProductSelectionCard } from "../components/ProductSelectionCard";
 import { BrandCard } from "../components/BrandCard";
 import { CampaignIntentionCard } from "../components/CampaignIntentionCard";
+import { ReviewAndLaunch } from "../components/ReviewAndLaunch";
 
 export function Dashboard() {
   return (
@@ -19,6 +20,7 @@ export function Dashboard() {
               <BrandCard />
               <CampaignIntentionCard />
             </div>
+            <ReviewAndLaunch />
           </div>
         </main>
       </div>
