@@ -5,30 +5,44 @@ import type { LucideIcon } from "lucide-react";
 type NavItem = {
   label: string;
   icon: LucideIcon;
+  to?: string;
 };
 
 const mainItems: NavItem[] = [
-  { label: "Projects", icon: SquareDashed },
+  { label: "Projects", icon: SquareDashed, to: "/projects" },
   { label: "Team", icon: SquareDashed },
   { label: "Usage", icon: SquareDashed },
   { label: "Admin", icon: SquareDashed },
 ];
 
 const favouriteItems: NavItem[] = [
-  { label: "Projects", icon: SquareDashed },
+  { label: "Projects", icon: SquareDashed, to: "/projects" },
   { label: "Team", icon: SquareDashed },
   { label: "Usage", icon: SquareDashed },
   { label: "Admin", icon: SquareDashed },
 ];
 
-function SidebarLink({ label, icon: Icon }: NavItem) {
-  return (
-    <button
-      type="button"
-      className="flex h-8 w-full items-center gap-2 rounded-md px-3 py-1 text-left text-sm text-sidebar-foreground hover:bg-white/5"
-    >
+function SidebarLink({ label, icon: Icon, to }: NavItem) {
+  const className =
+    "flex h-8 w-full items-center gap-2 rounded-md px-3 py-1 text-left text-sm text-sidebar-foreground hover:bg-white/5";
+  const content = (
+    <>
       <Icon className="size-4 shrink-0" />
       <span className="min-w-0 flex-1 truncate">{label}</span>
+    </>
+  );
+
+  if (to) {
+    return (
+      <Link to={to} className={className}>
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <button type="button" className={className}>
+      {content}
     </button>
   );
 }
