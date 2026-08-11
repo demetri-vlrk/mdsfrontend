@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@import "@fontsource/geist-sans/400.css";
+@import "@fontsource/geist-sans/500.css";
+@import "@fontsource/geist-sans/600.css";
+
+@theme {
+  --font-sans: "Geist Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: #0a0a0a;
+  --color-foreground: #fafafa;
+  --color-muted-foreground: #a3a3a3;
+  --color-border: #404040;
+  --color-input: rgba(255, 255, 255, 0.05);
+  --color-outline: rgba(255, 255, 255, 0.05);
+  --color-ghost: rgba(255, 255, 255, 0);
+  --color-primary: #f5f5f5;
+  --color-primary-foreground: #0a0a0a;
+  --color-accent: #171717;
+  --color-border-strong: #737373;
+
+  --color-sidebar: #0a0a0a;
+  --color-sidebar-foreground: #d4d4d4;
+  --color-sidebar-muted: #737373;
+
+  --color-lime-950: #1a2e05;
+  --color-lime-400: #a3e635;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
