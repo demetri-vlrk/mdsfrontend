@@ -18,7 +18,7 @@ export function CampaignDetail() {
             src={headerGlow}
             alt=""
             aria-hidden
-            className="pointer-events-none absolute top-0 right-0 h-[460px] w-auto max-w-none"
+            className="pointer-events-none absolute top-0 right-0 h-[460px] w-auto max-w-none saturate-150 brightness-125"
           />
           <main className="flex min-h-[calc(100svh-4rem)] flex-1 flex-col items-start">
             <div className="flex w-full flex-col items-start">
