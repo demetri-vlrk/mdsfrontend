@@ -16,17 +16,24 @@ export function BrandDnaSection({
   title = "Brand DNA",
   showViewAll = true,
   viewAllHref,
+  onLogosClick,
 }: {
   title?: string;
   showViewAll?: boolean;
   viewAllHref?: string;
+  onLogosClick?: () => void;
 }) {
   return (
     <div className="flex w-full flex-col items-start gap-6 border border-border px-8 py-10">
       <SectionHeader title={title} showViewAll={showViewAll} viewAllHref={viewAllHref} />
 
       <div className="flex w-full items-stretch">
-        <div className="flex flex-1 flex-col items-start gap-6 border border-border p-6">
+        <div
+          onClick={onLogosClick}
+          role={onLogosClick ? "button" : undefined}
+          tabIndex={onLogosClick ? 0 : undefined}
+          className={`flex flex-1 flex-col items-start gap-6 border border-border p-6 ${onLogosClick ? "cursor-pointer hover:bg-white/5" : ""}`}
+        >
           <CardHeading icon={Package} title="Brand Logos" />
           <div className="flex w-full flex-col items-start gap-3 border border-border">
             <img src={brandLogo1} alt="Brand logo on light background" className="w-full" />

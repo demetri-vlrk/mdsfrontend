@@ -1,13 +1,17 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ListFilter, MessageSquareText, Plus } from "lucide-react";
 import { TopNav } from "../components/TopNav";
 import { Sidebar } from "../components/Sidebar";
 import { UtilityRail } from "../components/home/UtilityRail";
 import { BrandDnaSection } from "../components/campaign/BrandDnaSection";
+import { EditLogosModal } from "../components/campaign/EditLogosModal";
 
 const FILTERS = ["Hero image", "Scale reference", "Ingredients", "Tagged"];
 
 export function BrandDna() {
+  const [isEditLogosOpen, setIsEditLogosOpen] = useState(false);
+
   return (
     <div className="min-h-svh bg-background">
       <TopNav />
@@ -63,10 +67,17 @@ export function BrandDna() {
             </div>
           </div>
 
-          <BrandDnaSection title="Brand Assets" showViewAll={false} />
+          <BrandDnaSection
+            title="Brand Assets"
+            showViewAll={false}
+            onLogosClick={() => setIsEditLogosOpen(true)}
+          />
         </main>
         <UtilityRail />
       </div>
+      {isEditLogosOpen && (
+        <EditLogosModal onClose={() => setIsEditLogosOpen(false)} />
+      )}
     </div>
   );
 }
