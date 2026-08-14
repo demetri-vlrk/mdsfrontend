@@ -57,8 +57,8 @@ export function CreditUsageChart() {
       preserveAspectRatio="none"
       aria-hidden
     >
-      <path d={balancePath} className="fill-muted-foreground/30" />
-      <path d={creditsPath} className="fill-foreground/90" />
+      <path d={balancePath} className="fill-fg-muted/30" />
+      <path d={creditsPath} className="fill-fg-default/90" />
     </svg>
   );
 }

@@ -5,7 +5,7 @@ import prismGlow2 from "../assets/prism-glow-2.png";
 
 export function NewCampaignStep1() {
   return (
-    <div className="min-h-svh bg-background">
+    <div className="min-h-svh bg-bg-canvas">
       <TopNav />
       <div className="flex">
         <Sidebar />

@@ -13,10 +13,10 @@ export function ProductSelectionCard() {
       title="Product Selection"
       description="Product url - website, social url or product listing"
     >
-      <div className="flex w-full items-center gap-2 rounded-lg bg-input px-3 py-[7.5px] shadow-xs">
+      <div className="flex w-full items-center gap-2 rounded-lg bg-bg-subtle px-3 py-[7.5px] shadow-xs">
         <div className="flex flex-1 items-center gap-1">
-          <span className="text-sm text-muted-foreground">https://www.</span>
-          <span className="text-sm text-foreground">jansports.com</span>
+          <span className="text-sm text-fg-muted">https://www.</span>
+          <span className="text-sm text-fg-default">jansports.com</span>
         </div>
         <div className="flex size-5 shrink-0 items-center justify-center p-0.5">
           <div className="flex size-6 items-center justify-center rounded-full bg-lime-950 p-1">

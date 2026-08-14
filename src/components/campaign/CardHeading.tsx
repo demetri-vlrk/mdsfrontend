@@ -14,7 +14,7 @@ export function CardHeading({
   return (
     <div className="flex w-full items-center gap-2.5">
       <IconBadge icon={icon} />
-      <p className="flex-1 text-2xl leading-[28.8px] font-semibold tracking-[-1px] text-foreground">
+      <p className="flex-1 text-2xl leading-[28.8px] font-semibold tracking-[-1px] text-fg-default">
         {title}
       </p>
       {children}

@@ -45,13 +45,13 @@ export function EditImageModal({
         <button
           type="button"
           aria-label="Previous image"
-          className="flex min-h-10 min-w-10 shrink-0 items-center justify-center rounded-full p-2.5 text-foreground hover:bg-white/5"
+          className="flex min-h-10 min-w-10 shrink-0 items-center justify-center rounded-full p-2.5 text-fg-default hover:bg-white/5"
         >
           <ChevronLeft className="size-4" />
         </button>
 
         <div className="flex flex-1 flex-col items-start p-4">
-          <div className="relative flex h-[600px] w-full flex-col items-start justify-end overflow-hidden border border-border p-8">
+          <div className="relative flex h-[600px] w-full flex-col items-start justify-end overflow-hidden border border-border-subtle p-8">
             <img
               src={image}
               alt=""
@@ -61,40 +61,40 @@ export function EditImageModal({
             <div className="relative flex w-full items-end justify-between">
               <div className="flex items-center gap-6">
                 <div className="flex items-stretch">
-                  <span className="flex items-center justify-center border-2 border-border px-8 py-4 text-sm font-medium text-foreground">
+                  <span className="flex items-center justify-center border-2 border-border-subtle px-8 py-4 text-sm font-medium text-fg-default">
                     Download
                   </span>
                   <button
                     type="button"
                     aria-label="Download"
-                    className="flex items-center justify-center border-2 border-l-0 border-border px-4 py-4 text-foreground hover:bg-white/5"
+                    className="flex items-center justify-center border-2 border-l-0 border-border-subtle px-4 py-4 text-fg-default hover:bg-white/5"
                   >
                     <Download className="size-4" />
                   </button>
                 </div>
                 <button
                   type="button"
-                  className="flex items-center gap-2 rounded-full border-2 border-white/40 bg-white/10 px-8 py-4 text-sm font-medium text-foreground shadow-xs"
+                  className="flex items-center gap-2 rounded-full border-2 border-white/40 bg-white/10 px-8 py-4 text-sm font-medium text-fg-default shadow-xs"
                 >
                   {label}
                   <ChevronsUpDown className="size-4" />
                 </button>
               </div>
               <div className="flex items-stretch">
-                <span className="flex items-center justify-center border-2 border-border px-8 py-4 text-sm font-medium text-foreground">
+                <span className="flex items-center justify-center border-2 border-border-subtle px-8 py-4 text-sm font-medium text-fg-default">
                   100%
                 </span>
                 <button
                   type="button"
                   aria-label="Zoom in"
-                  className="flex items-center justify-center border-2 border-l-0 border-border px-4 py-4 text-foreground hover:bg-white/5"
+                  className="flex items-center justify-center border-2 border-l-0 border-border-subtle px-4 py-4 text-fg-default hover:bg-white/5"
                 >
                   <ZoomIn className="size-4" />
                 </button>
                 <button
                   type="button"
                   aria-label="Zoom out"
-                  className="flex items-center justify-center border-2 border-l-0 border-border px-4 py-4 text-foreground hover:bg-white/5"
+                  className="flex items-center justify-center border-2 border-l-0 border-border-subtle px-4 py-4 text-fg-default hover:bg-white/5"
                 >
                   <ZoomOut className="size-4" />
                 </button>
@@ -106,7 +106,7 @@ export function EditImageModal({
         <button
           type="button"
           aria-label="Next image"
-          className="flex min-h-10 min-w-10 shrink-0 items-center justify-center rounded-full p-2.5 text-foreground hover:bg-white/5"
+          className="flex min-h-10 min-w-10 shrink-0 items-center justify-center rounded-full p-2.5 text-fg-default hover:bg-white/5"
         >
           <ChevronRight className="size-4" />
         </button>
@@ -117,14 +117,14 @@ export function EditImageModal({
               {tags.map((tag) => (
                 <span
                   key={tag}
-                  className="flex min-h-8 items-center justify-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5 text-sm font-medium text-foreground shadow-xs"
+                  className="flex min-h-8 items-center justify-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5 text-sm font-medium text-fg-default shadow-xs"
                 >
                   {tag}
                   <button
                     type="button"
                     aria-label={`Remove ${tag}`}
                     onClick={() => setTags((t) => t.filter((x) => x !== tag))}
-                    className="flex size-4 items-center justify-center hover:text-muted-foreground"
+                    className="flex size-4 items-center justify-center hover:text-fg-muted"
                   >
                     <X className="size-4" />
                   </button>
@@ -133,7 +133,7 @@ export function EditImageModal({
             </div>
 
             <div className="flex w-full flex-col items-start gap-1">
-              <p className="text-sm font-medium text-foreground">
+              <p className="text-sm font-medium text-fg-default">
                 Add more tags
               </p>
               <input
@@ -142,36 +142,36 @@ export function EditImageModal({
                 onChange={(e) => setNewTag(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && addTag()}
                 placeholder="Type and press enter"
-                className="w-full rounded-lg bg-input px-4 py-2.5 text-sm text-foreground shadow-xs placeholder:text-muted-foreground focus:outline-none"
+                className="w-full rounded-lg bg-bg-subtle px-4 py-2.5 text-sm text-fg-default shadow-xs placeholder:text-fg-muted focus:outline-none"
               />
             </div>
           </div>
 
-          <div className="flex w-full flex-col items-start gap-2.5 border-t border-border p-6">
+          <div className="flex w-full flex-col items-start gap-2.5 border-t border-border-subtle p-6">
             <button
               type="button"
-              className="flex min-h-9 w-full items-center justify-center gap-2 bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+              className="flex min-h-9 w-full items-center justify-center gap-2 bg-accent-primary px-4 py-2 text-sm font-medium text-gray-0 hover:bg-accent-primaryhover"
             >
               Edit in Iris
               <ArrowRight className="size-4" />
             </button>
             <button
               type="button"
-              className="flex min-h-9 w-full items-center justify-center gap-2 border border-border bg-white/10 px-4 py-2 text-sm font-medium text-foreground shadow-xs hover:bg-white/20"
+              className="flex min-h-9 w-full items-center justify-center gap-2 border border-border-subtle bg-white/10 px-4 py-2 text-sm font-medium text-fg-default shadow-xs hover:bg-white/20"
             >
               Upscale Image
               <ArrowRight className="size-4" />
             </button>
             <button
               type="button"
-              className="flex min-h-9 w-full items-center justify-center gap-2 border border-border bg-white/10 px-4 py-2 text-sm font-medium text-foreground shadow-xs hover:bg-white/20"
+              className="flex min-h-9 w-full items-center justify-center gap-2 border border-border-subtle bg-white/10 px-4 py-2 text-sm font-medium text-fg-default shadow-xs hover:bg-white/20"
             >
               Create Video
               <ArrowRight className="size-4" />
             </button>
             <button
               type="button"
-              className="flex min-h-9 w-full items-center justify-center gap-2 bg-destructive px-4 py-2 text-sm font-medium text-white hover:bg-destructive/90"
+              className="flex min-h-9 w-full items-center justify-center gap-2 bg-red-500 px-4 py-2 text-sm font-medium text-white hover:bg-red-500/90"
             >
               Delete
             </button>

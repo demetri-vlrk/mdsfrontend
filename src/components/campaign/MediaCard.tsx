@@ -13,7 +13,7 @@ export function MediaCard({
 }) {
   return (
     <div
-      className={`relative flex w-full flex-col items-start justify-end overflow-hidden border border-border p-6 ${className}`}
+      className={`relative flex w-full flex-col items-start justify-end overflow-hidden border border-border-subtle p-6 ${className}`}
     >
       <img
         src={image}
@@ -26,12 +26,12 @@ export function MediaCard({
           {title}
         </p>
         <div className="flex w-full items-center gap-2">
-          <span className="flex min-h-6 items-center justify-center rounded-full bg-secondary px-2 py-0.5 text-xs font-medium text-secondary-foreground">
+          <span className="flex min-h-6 items-center justify-center rounded-full bg-bg-subtle px-2 py-0.5 text-xs font-medium text-fg-default">
             {badge}
           </span>
           <Link
             to="/campaigns/op-1/images"
-            className="flex min-h-6 items-center justify-center rounded-full bg-primary px-4 py-0.5 text-xs text-primary-foreground hover:bg-primary/90"
+            className="flex min-h-6 items-center justify-center rounded-full bg-accent-primary px-4 py-0.5 text-xs text-gray-0 hover:bg-accent-primaryhover"
           >
             Edit
           </Link>

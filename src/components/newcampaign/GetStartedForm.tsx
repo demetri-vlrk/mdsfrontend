@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Tag({ label, onRemove }: { label: string; onRemove: () => void }) {
   return (
     <div className="flex shrink-0 items-center bg-[#5c5c5c]/38">
-      <span className="px-3 py-1.5 text-sm font-semibold text-foreground">
+      <span className="px-3 py-1.5 text-sm font-semibold text-fg-default">
         {label}
       </span>
       <button
@@ -31,7 +31,7 @@ function TagField({
 }) {
   return (
     <div className="flex w-full flex-col items-start gap-4">
-      <p className="text-[17px] font-medium text-muted-foreground">{label}</p>
+      <p className="text-[17px] font-medium text-fg-muted">{label}</p>
       <div className="flex h-12 w-full items-center gap-2.5 border border-white/25 px-3">
         {tags.map((tag) => (
           <Tag key={tag} label={tag} onRemove={() => onRemove(tag)} />
@@ -50,16 +50,16 @@ function SelectField({
 }) {
   return (
     <div className="flex w-full flex-col items-start gap-4">
-      <p className="text-[17px] font-medium text-muted-foreground">{label}</p>
+      <p className="text-[17px] font-medium text-fg-muted">{label}</p>
       <button
         type="button"
         className="flex h-12 w-full items-center border border-white/25 text-left"
       >
-        <span className="flex-1 px-3.5 text-[17px] text-muted-foreground">
+        <span className="flex-1 px-3.5 text-[17px] text-fg-muted">
           {placeholder}
         </span>
         <span className="flex aspect-square h-full items-center justify-center border border-[#77797d] bg-white/10">
-          <ChevronDown className="size-5 text-foreground" />
+          <ChevronDown className="size-5 text-fg-default" />
         </span>
       </button>
     </div>
@@ -76,7 +76,7 @@ export function GetStartedForm() {
         <span className="flex items-center bg-brand-500/50 p-3 text-base font-light text-brand-400">
           01
         </span>
-        <span className="flex items-center bg-white/15 p-3 text-sm text-foreground">
+        <span className="flex items-center bg-white/15 p-3 text-sm text-fg-default">
           Let's get started
         </span>
       </div>
@@ -103,12 +103,12 @@ export function GetStartedForm() {
 
           <div className="flex w-[449px] flex-col gap-6">
             <div className="flex w-full flex-col gap-4">
-              <p className="text-[17px] font-medium text-muted-foreground">
+              <p className="text-[17px] font-medium text-fg-muted">
                 Campaign Intention
               </p>
               <textarea
                 placeholder="Lorem upsumm.."
-                className="h-[120px] w-full resize-y border border-white/25 p-3 text-[17px] text-muted-foreground outline-none placeholder:text-muted-foreground"
+                className="h-[120px] w-full resize-y border border-white/25 p-3 text-[17px] text-fg-muted outline-none placeholder:text-fg-muted"
               />
             </div>
             <SelectField
@@ -121,7 +121,7 @@ export function GetStartedForm() {
 
         <Link
           to="/new-campaign/step-2"
-          className="relative z-10 flex w-full items-center justify-center gap-6 bg-white/10 py-6 text-[17px] font-semibold text-foreground hover:bg-white/15"
+          className="relative z-10 flex w-full items-center justify-center gap-6 bg-white/10 py-6 text-[17px] font-semibold text-fg-default hover:bg-white/15"
         >
           Next
           <ArrowRight className="size-5" />

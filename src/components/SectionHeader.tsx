@@ -16,16 +16,16 @@ export function SectionHeader({
   children?: ReactNode;
 }) {
   const viewAllClassName =
-    "flex items-center gap-1 text-sm font-semibold text-primary hover:opacity-80";
+    "flex items-center gap-1 text-sm font-semibold text-accent-primary hover:opacity-80";
 
   return (
     <div className="flex w-full items-center">
       <div className="flex flex-1 items-center gap-6 min-w-0">
-        <h2 className="text-[30px] leading-[30px] font-semibold tracking-[-1px] text-foreground">
+        <h2 className="text-[30px] leading-[30px] font-semibold tracking-[-1px] text-fg-default">
           {title}
         </h2>
         {badge && (
-          <span className="flex min-h-6 shrink-0 items-center justify-center rounded-full bg-secondary px-2 py-[3px] text-xs font-medium text-secondary-foreground">
+          <span className="flex min-h-6 shrink-0 items-center justify-center rounded-full bg-bg-subtle px-2 py-[3px] text-xs font-medium text-fg-default">
             {badge}
           </span>
         )}

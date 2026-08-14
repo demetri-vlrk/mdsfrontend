@@ -11,7 +11,7 @@ export function ProjectCard({
 }) {
   return (
     <div
-      className={`relative flex w-full flex-col items-start justify-end overflow-hidden border border-border p-8 ${className}`}
+      className={`relative flex w-full flex-col items-start justify-end overflow-hidden border border-border-subtle p-8 ${className}`}
     >
       <img
         src={projectThumb}
@@ -19,7 +19,7 @@ export function ProjectCard({
         className="absolute inset-0 size-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/0 from-50% to-black" />
-      <div className="relative flex w-full flex-col items-start text-foreground">
+      <div className="relative flex w-full flex-col items-start text-fg-default">
         <p className="w-full overflow-hidden text-ellipsis text-2xl leading-[28.8px] font-semibold tracking-[-1px]">
           {name}
         </p>

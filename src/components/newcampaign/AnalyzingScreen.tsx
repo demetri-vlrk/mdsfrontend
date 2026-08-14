@@ -21,14 +21,14 @@ export function AnalyzingScreen() {
         </div>
         <div className="flex items-center gap-7 bg-white/15 p-3">
           <div className="flex flex-col gap-2.5 text-left">
-            <p className="text-2xl font-medium text-foreground">
+            <p className="text-2xl font-medium text-fg-default">
               MBS is analyzing....
             </p>
-            <p className="text-[13px] text-foreground">
+            <p className="text-[13px] text-fg-default">
               Eiusmod sunt consequat in laboris non veniam eu.
             </p>
           </div>
-          <ChevronDown className="size-5 shrink-0 text-foreground" />
+          <ChevronDown className="size-5 shrink-0 text-fg-default" />
         </div>
       </Link>
     </div>

@@ -50,12 +50,12 @@ function ImageTile({
         <button
           type="button"
           onClick={onSetHero}
-          className={`px-3 py-1.5 text-sm font-semibold ${isHero ? "bg-brand-500 text-white" : "text-foreground"}`}
+          className={`px-3 py-1.5 text-sm font-semibold ${isHero ? "bg-brand-500 text-white" : "text-fg-default"}`}
         >
           Hero
         </button>
         <span
-          className={`flex-1 px-3 py-1.5 text-sm font-semibold ${!isHero ? "bg-brand-500 text-white" : "text-foreground"}`}
+          className={`flex-1 px-3 py-1.5 text-sm font-semibold ${!isHero ? "bg-brand-500 text-white" : "text-fg-default"}`}
         >
           Reference
         </span>
@@ -76,10 +76,10 @@ function ImageTile({
 function SummaryField({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex w-full flex-col gap-1">
-      <div className="flex w-full items-center gap-1 text-xs text-muted-foreground">
+      <div className="flex w-full items-center gap-1 text-xs text-fg-muted">
         {label}
       </div>
-      <p className="w-full text-xs text-foreground">{value}</p>
+      <p className="w-full text-xs text-fg-default">{value}</p>
     </div>
   );
 }
@@ -92,20 +92,20 @@ export function FinalCheckForm() {
     <div className="flex flex-col items-center gap-8 py-16">
       <div className="flex flex-col items-center gap-3">
         <div className="flex items-center gap-6">
-          <h1 className="text-[64px] leading-none font-medium tracking-[-1.28px] text-foreground">
+          <h1 className="text-[64px] leading-none font-medium tracking-[-1.28px] text-fg-default">
             Product Name
           </h1>
           <button
             type="button"
-            className="flex items-center gap-1.5 border border-white/25 p-3 text-sm font-semibold text-foreground"
+            className="flex items-center gap-1.5 border border-white/25 p-3 text-sm font-semibold text-fg-default"
           >
             <Pencil className="size-3.5" />
             Edit
           </button>
         </div>
         <div className="flex items-center text-xl">
-          <span className="text-muted-foreground">https://www.</span>
-          <span className="text-foreground">alphalpha.com</span>
+          <span className="text-fg-muted">https://www.</span>
+          <span className="text-fg-default">alphalpha.com</span>
         </div>
       </div>
 
@@ -114,7 +114,7 @@ export function FinalCheckForm() {
           <span className="flex items-center bg-brand-500/50 p-3 text-base font-light text-brand-400">
             03
           </span>
-          <span className="flex items-center bg-white/15 p-3 text-sm text-foreground">
+          <span className="flex items-center bg-white/15 p-3 text-sm text-fg-default">
             Final Check
           </span>
         </div>
@@ -126,9 +126,9 @@ export function FinalCheckForm() {
                 <p className="text-2xl font-semibold tracking-[-0.48px] text-white">
                   Image Selection
                 </p>
-                <Info className="size-4 text-muted-foreground" />
+                <Info className="size-4 text-fg-muted" />
               </div>
-              <p className="text-xs text-muted-foreground">
+              <p className="text-xs text-fg-muted">
                 Pick a hero image and up to 6 references
               </p>
             </div>
@@ -153,7 +153,7 @@ export function FinalCheckForm() {
                     { id: Date.now(), image: thumb1 },
                   ])
                 }
-                className="flex aspect-square flex-col items-center justify-center gap-2 border-[1.5px] border-white/25 text-foreground hover:border-white/40"
+                className="flex aspect-square flex-col items-center justify-center gap-2 border-[1.5px] border-white/25 text-fg-default hover:border-white/40"
               >
                 <Plus className="size-5" />
               </button>
@@ -168,7 +168,7 @@ export function FinalCheckForm() {
             </div>
             <Link
               to="/new-campaign/analyzing"
-              className="flex w-full items-center justify-center gap-6 bg-brand-500/50 py-6 text-[17px] font-semibold text-foreground hover:bg-brand-500/60"
+              className="flex w-full items-center justify-center gap-6 bg-brand-500/50 py-6 text-[17px] font-semibold text-fg-default hover:bg-brand-500/60"
             >
               Start Research
               <ArrowRight className="size-5" />

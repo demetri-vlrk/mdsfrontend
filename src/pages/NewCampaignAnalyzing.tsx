@@ -4,7 +4,7 @@ import { AnalyzingScreen } from "../components/newcampaign/AnalyzingScreen";
 
 export function NewCampaignAnalyzing() {
   return (
-    <div className="min-h-svh bg-background">
+    <div className="min-h-svh bg-bg-canvas">
       <TopNav />
       <div className="flex">
         <Sidebar />

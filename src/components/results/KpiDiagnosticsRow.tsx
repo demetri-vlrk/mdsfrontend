@@ -15,7 +15,7 @@ const GRADIENT_TEXT = {
 
 export function KpiDiagnosticsRow() {
   return (
-    <div className="mx-8 flex flex-col items-start gap-4 border border-border p-4">
+    <div className="mx-8 flex flex-col items-start gap-4 border border-border-subtle p-4">
       <CardHeading icon={Package} title="KPIs & Diagnostics" />
       <div className="flex w-full items-start">
         {KPI_GAUGES.map((kpi, i) => (
@@ -28,7 +28,7 @@ export function KpiDiagnosticsRow() {
           </div>
         ))}
         <div className="flex h-[181px] flex-1 flex-col items-center justify-center gap-3 p-3">
-          <p className="text-xs text-muted-foreground">
+          <p className="text-xs text-fg-muted">
             Time to First Finished Track
           </p>
           <p
@@ -37,7 +37,7 @@ export function KpiDiagnosticsRow() {
           >
             +22%
           </p>
-          <p className="text-sm font-bold text-foreground">
+          <p className="text-sm font-bold text-fg-default">
             Target: &lt; 14 days
           </p>
         </div>

@@ -21,11 +21,11 @@ const GRADIENT_TEXT = {
 
 export function StrategyInsightsSection() {
   return (
-    <div className="flex w-full flex-col items-start gap-6 border border-border px-8 py-10">
+    <div className="flex w-full flex-col items-start gap-6 border border-border-subtle px-8 py-10">
       <SectionHeader title="Strategy & Insights" />
 
       <div className="flex w-full items-stretch">
-        <div className="relative flex flex-1 flex-col items-start gap-6 border border-border p-6">
+        <div className="relative flex flex-1 flex-col items-start gap-6 border border-border-subtle p-6">
           <CardHeading icon={Package} title="Proposition" />
           <img
             src={propositionGlow}
@@ -40,10 +40,10 @@ export function StrategyInsightsSection() {
             className="pointer-events-none absolute top-6 right-0 h-[394px] w-auto mix-blend-lighten"
           />
           <div className="relative flex max-w-[480px] flex-col gap-1">
-            <p className="max-w-[410px] text-5xl leading-[48px] font-semibold tracking-[-1.5px] text-foreground">
+            <p className="max-w-[410px] text-5xl leading-[48px] font-semibold tracking-[-1.5px] text-fg-default">
               Single-Minded Proposition
             </p>
-            <div className="flex max-w-[328px] flex-col gap-1 text-muted-foreground">
+            <div className="flex max-w-[328px] flex-col gap-1 text-fg-muted">
               <p className="text-lg leading-[27px] font-semibold">
                 OP‑1 is the synthesizer that grants permission to stop
                 preparing and start creating.
@@ -56,7 +56,7 @@ export function StrategyInsightsSection() {
           </div>
         </div>
 
-        <div className="flex w-[472px] shrink-0 flex-col items-start gap-6 border border-border p-4">
+        <div className="flex w-[472px] shrink-0 flex-col items-start gap-6 border border-border-subtle p-4">
           <CardHeading icon={Package} title="Behavioral Ladder" />
           <div className="flex w-full flex-col gap-6">
             {LADDER_STEPS.map((step) => (
@@ -66,7 +66,7 @@ export function StrategyInsightsSection() {
         </div>
       </div>
 
-      <div className="flex w-full flex-col items-start gap-6 border border-border p-4">
+      <div className="flex w-full flex-col items-start gap-6 border border-border-subtle p-4">
         <CardHeading icon={Package} title="KPIs & Diagnostics" />
         <div className="flex w-full items-start">
           {KPI_GAUGES.map((kpi, i) => (
@@ -79,7 +79,7 @@ export function StrategyInsightsSection() {
             </div>
           ))}
           <div className="flex h-[181px] flex-1 flex-col items-center justify-center gap-3 p-3">
-            <p className="text-xs text-muted-foreground">
+            <p className="text-xs text-fg-muted">
               Time to First Finished Track
             </p>
             <p
@@ -88,7 +88,7 @@ export function StrategyInsightsSection() {
             >
               +22%
             </p>
-            <p className="text-sm font-bold text-foreground">
+            <p className="text-sm font-bold text-fg-default">
               Target: &lt; 14 days
             </p>
           </div>

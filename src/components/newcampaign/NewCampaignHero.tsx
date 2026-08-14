@@ -16,10 +16,10 @@ export function NewCampaignHero() {
 
       <div className="relative z-10 -mt-44 flex w-full flex-col items-center gap-8 px-4 pb-20">
         <div className="flex flex-col items-center gap-2.5 text-center">
-          <h1 className="max-w-[540px] text-[64px] leading-none font-medium tracking-[-1.28px] text-foreground">
+          <h1 className="max-w-[540px] text-[64px] leading-none font-medium tracking-[-1.28px] text-fg-default">
             Build your whole campaign at shot!
           </h1>
-          <p className="max-w-[460px] text-base leading-[1.2] text-muted-foreground">
+          <p className="max-w-[460px] text-base leading-[1.2] text-fg-muted">
             Build your entire campaign by entering a few details about your
             product.
             <br />
@@ -34,17 +34,17 @@ export function NewCampaignHero() {
             className="gradient-border flex w-full items-center justify-between p-3"
           >
             <div className="flex flex-1 items-center gap-1 text-xl">
-              <span className="text-muted-foreground">https://www.</span>
+              <span className="text-fg-muted">https://www.</span>
               <input
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
-                className="flex-1 bg-transparent text-foreground outline-none"
+                className="flex-1 bg-transparent text-fg-default outline-none"
               />
             </div>
             <button
               type="submit"
               aria-label="Submit"
-              className="flex items-center justify-center p-3.5 text-foreground"
+              className="flex items-center justify-center p-3.5 text-fg-default"
             >
               <ArrowRight className="size-5" />
             </button>
@@ -52,11 +52,11 @@ export function NewCampaignHero() {
 
           <button
             type="button"
-            className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground"
+            className="flex items-center gap-1 text-xs text-fg-muted hover:text-fg-default"
           >
             Or
-            <ImagePlus className="size-4 text-foreground" />
-            <span className="text-foreground">Start with Image</span>
+            <ImagePlus className="size-4 text-fg-default" />
+            <span className="text-fg-default">Start with Image</span>
           </button>
         </div>
       </div>

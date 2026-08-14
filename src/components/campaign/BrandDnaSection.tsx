@@ -24,7 +24,7 @@ export function BrandDnaSection({
   onLogosClick?: () => void;
 }) {
   return (
-    <div className="flex w-full flex-col items-start gap-6 border border-border px-8 py-10">
+    <div className="flex w-full flex-col items-start gap-6 border border-border-subtle px-8 py-10">
       <SectionHeader title={title} showViewAll={showViewAll} viewAllHref={viewAllHref} />
 
       <div className="flex w-full items-stretch">
@@ -32,16 +32,16 @@ export function BrandDnaSection({
           onClick={onLogosClick}
           role={onLogosClick ? "button" : undefined}
           tabIndex={onLogosClick ? 0 : undefined}
-          className={`flex flex-1 flex-col items-start gap-6 border border-border p-6 ${onLogosClick ? "cursor-pointer hover:bg-white/5" : ""}`}
+          className={`flex flex-1 flex-col items-start gap-6 border border-border-subtle p-6 ${onLogosClick ? "cursor-pointer hover:bg-white/5" : ""}`}
         >
           <CardHeading icon={Package} title="Brand Logos" />
-          <div className="flex w-full flex-col items-start gap-3 border border-border">
+          <div className="flex w-full flex-col items-start gap-3 border border-border-subtle">
             <img src={brandLogo1} alt="Brand logo on light background" className="w-full" />
             <img src={brandLogo2} alt="Brand logo on dark background" className="w-full" />
           </div>
         </div>
 
-        <div className="flex flex-1 flex-col items-start border border-border">
+        <div className="flex flex-1 flex-col items-start border border-border-subtle">
           <div className="w-full p-6">
             <CardHeading icon={TypeOutline} title="Brand Fonts" />
           </div>
@@ -49,11 +49,11 @@ export function BrandDnaSection({
         </div>
 
         <div className="flex flex-1 flex-col items-stretch">
-          <div className="flex flex-col items-start gap-6 border border-border p-6">
+          <div className="flex flex-col items-start gap-6 border border-border-subtle p-6">
             <CardHeading icon={SwatchBook} title="Brand Colors" />
             <ColorSwatches colors={["#b96f14", "#3e2784", "#ffe045", "#d9d9d9"]} />
           </div>
-          <div className="flex flex-col items-start border border-border">
+          <div className="flex flex-col items-start border border-border-subtle">
             <div className="w-full p-6">
               <CardHeading icon={TypeOutline} title="Brand Documents" />
             </div>
@@ -61,7 +61,7 @@ export function BrandDnaSection({
           </div>
         </div>
 
-        <div className="flex flex-1 flex-col items-start border border-border">
+        <div className="flex flex-1 flex-col items-start border border-border-subtle">
           <div className="w-full p-6">
             <CardHeading icon={TypeOutline} title="Brand Videos" />
           </div>

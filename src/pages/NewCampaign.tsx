@@ -4,7 +4,7 @@ import { NewCampaignHero } from "../components/newcampaign/NewCampaignHero";
 
 export function NewCampaign() {
   return (
-    <div className="min-h-svh bg-background">
+    <div className="min-h-svh bg-bg-canvas">
       <TopNav />
       <div className="flex">
         <Sidebar />

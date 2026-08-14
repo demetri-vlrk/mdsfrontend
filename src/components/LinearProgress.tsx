@@ -7,15 +7,15 @@ export function LinearProgress({
 }) {
   return (
     <div className="flex w-full flex-col items-start gap-2 px-4">
-      <p className="text-sm text-foreground">{label}</p>
+      <p className="text-sm text-fg-default">{label}</p>
       <div className="flex w-full items-center gap-2.5">
-        <div className="h-2 w-full flex-1 overflow-hidden rounded-xl bg-border">
+        <div className="h-2 w-full flex-1 overflow-hidden rounded-xl bg-border-subtle">
           <div
-            className="h-full rounded-xl bg-primary"
+            className="h-full rounded-xl bg-accent-primary"
             style={{ width: `${percent}%` }}
           />
         </div>
-        <p className="shrink-0 text-sm text-foreground">{percent}%</p>
+        <p className="shrink-0 text-sm text-fg-default">{percent}%</p>
       </div>
     </div>
   );

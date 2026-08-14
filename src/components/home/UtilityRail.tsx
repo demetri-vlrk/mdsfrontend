@@ -6,7 +6,7 @@ export function UtilityRail({
   onChatClick?: () => void;
 }) {
   return (
-    <aside className="relative flex w-14 shrink-0 flex-col items-start gap-px border-l border-border px-2 py-3">
+    <aside className="relative flex w-14 shrink-0 flex-col items-start gap-px border-l border-border-subtle px-2 py-3">
       <button
         type="button"
         aria-label="Open chat"

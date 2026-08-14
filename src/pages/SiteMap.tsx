@@ -18,9 +18,9 @@ const pages = [
 
 export function SiteMap() {
   return (
-    <div className="min-h-svh w-full bg-background p-8">
+    <div className="min-h-svh w-full bg-bg-canvas p-8">
       <div className="mx-auto flex max-w-xl flex-col gap-6">
-        <h1 className="text-2xl font-semibold tracking-[-1px] text-foreground">
+        <h1 className="text-2xl font-semibold tracking-[-1px] text-fg-default">
           All Pages
         </h1>
         <div className="flex flex-col gap-2">
@@ -28,10 +28,10 @@ export function SiteMap() {
             <Link
               key={page.path}
               to={page.path}
-              className="flex items-center justify-between border border-border bg-white/5 px-4 py-3 text-sm font-medium text-foreground hover:bg-white/10"
+              className="flex items-center justify-between border border-border-subtle bg-white/5 px-4 py-3 text-sm font-medium text-fg-default hover:bg-white/10"
             >
               <span>{page.label}</span>
-              <span className="text-muted-foreground">{page.path}</span>
+              <span className="text-fg-muted">{page.path}</span>
             </Link>
           ))}
         </div>

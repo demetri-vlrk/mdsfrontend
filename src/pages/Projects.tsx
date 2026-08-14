@@ -14,7 +14,7 @@ const PROJECTS = Array.from({ length: 6 }, () => ({
 
 export function Projects() {
   return (
-    <div className="min-h-svh bg-background">
+    <div className="min-h-svh bg-bg-canvas">
       <TopNav />
       <div className="flex">
         <Sidebar />
@@ -23,12 +23,12 @@ export function Projects() {
             <div className="flex flex-1 flex-col items-start gap-6">
               <Link
                 to="/home"
-                className="flex min-h-9 items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground"
+                className="flex min-h-9 items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-fg-muted hover:text-fg-default"
               >
                 <ChevronLeft className="size-4" />
                 Back to dashboard
               </Link>
-              <h1 className="text-5xl leading-[48px] font-semibold tracking-[-1.5px] text-foreground">
+              <h1 className="text-5xl leading-[48px] font-semibold tracking-[-1.5px] text-fg-default">
                 Projects
               </h1>
               <div className="flex w-full items-center gap-3">
@@ -36,14 +36,14 @@ export function Projects() {
                   <button
                     key={filter}
                     type="button"
-                    className="flex min-h-9 items-center justify-center rounded-full bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground hover:bg-secondary/80"
+                    className="flex min-h-9 items-center justify-center rounded-full bg-bg-subtle px-4 py-2 text-sm font-medium text-fg-default hover:bg-bg-elevated"
                   >
                     {filter}
                   </button>
                 ))}
                 <button
                   type="button"
-                  className="flex min-h-9 items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground"
+                  className="flex min-h-9 items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium text-fg-muted hover:text-fg-default"
                 >
                   <ListFilter className="size-4" />
                   Filter
@@ -52,14 +52,14 @@ export function Projects() {
             </div>
             <button
               type="button"
-              className="flex min-h-9 w-[167px] shrink-0 items-center justify-center gap-2 bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+              className="flex min-h-9 w-[167px] shrink-0 items-center justify-center gap-2 bg-accent-primary px-4 py-2 text-sm font-medium text-gray-0 hover:bg-accent-primaryhover"
             >
               <Plus className="size-4" />
               New Project
             </button>
           </div>
 
-          <div className="grid w-full grid-cols-1 border-t border-border sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid w-full grid-cols-1 border-t border-border-subtle sm:grid-cols-2 lg:grid-cols-3">
             {PROJECTS.map((project, i) => (
               <ProjectCard key={i} {...project} className="h-[428px]" />
             ))}

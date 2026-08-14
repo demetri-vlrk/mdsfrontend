@@ -18,10 +18,10 @@ export function Hero() {
       />
 
       <div className="relative flex w-full flex-1 flex-col items-center justify-center gap-2.5 px-4 py-6">
-        <h1 className="w-full max-w-[480px] text-center text-5xl leading-[48px] font-semibold tracking-[-1.5px] text-foreground">
+        <h1 className="w-full max-w-[480px] text-center text-5xl leading-[48px] font-semibold tracking-[-1.5px] text-fg-default">
           Build your whole campaign at shot!
         </h1>
-        <p className="max-w-[560px] text-center text-base leading-6 text-muted-foreground">
+        <p className="max-w-[560px] text-center text-base leading-6 text-fg-muted">
           Build your entire campaign by entering a few details about your
           product.
           <br />
@@ -45,8 +45,8 @@ export function Hero() {
                   onClick={() => setActiveTab(tab)}
                   className={`rounded-full px-8 py-3 text-base font-medium transition-colors ${
                     isActive
-                      ? "bg-primary text-primary-foreground shadow-xs"
-                      : "bg-transparent text-foreground hover:bg-white/5"
+                      ? "bg-accent-primary text-gray-0 shadow-xs"
+                      : "bg-transparent text-fg-default hover:bg-white/5"
                   }`}
                 >
                   {tab}

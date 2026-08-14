@@ -11,15 +11,15 @@ export function FormCard({
   children: ReactNode;
 }) {
   return (
-    <div className="flex flex-1 flex-col gap-5 border border-border px-5 py-16">
+    <div className="flex flex-1 flex-col gap-5 border border-border-subtle px-5 py-16">
       <div className="flex flex-col gap-1">
         <div className="flex w-full items-center justify-center gap-2.5">
           <h3 className="flex-1 text-2xl leading-[28.8px] font-semibold tracking-[-1px] text-white">
             {title}
           </h3>
-          <Info className="size-4 shrink-0 text-muted-foreground" />
+          <Info className="size-4 shrink-0 text-fg-muted" />
         </div>
-        <p className="text-xs leading-4 text-muted-foreground">
+        <p className="text-xs leading-4 text-fg-muted">
           {description}
         </p>
       </div>

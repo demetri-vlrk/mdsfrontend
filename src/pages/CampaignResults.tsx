@@ -12,7 +12,7 @@ import headerGlow from "../assets/campaign-header-glow.png";
 
 export function CampaignResults() {
   return (
-    <div className="min-h-svh bg-background">
+    <div className="min-h-svh bg-bg-canvas">
       <TopNav />
       <div className="flex">
         <Sidebar />

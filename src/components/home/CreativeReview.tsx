@@ -17,13 +17,13 @@ const ITEMS: ReviewItem[] = [
 
 export function CreativeReview() {
   return (
-    <div className="flex h-full flex-1 flex-col items-start gap-6 border border-border px-8 py-10">
+    <div className="flex h-full flex-1 flex-col items-start gap-6 border border-border-subtle px-8 py-10">
       <SectionHeader title="Creative Review" badge="3+ New" />
-      <div className="flex w-full flex-col items-start border-t border-border">
+      <div className="flex w-full flex-col items-start border-t border-border-subtle">
         {ITEMS.map((item, i) => (
           <div
             key={i}
-            className="flex w-full items-center gap-4 border-x border-b border-border p-6"
+            className="flex w-full items-center gap-4 border-x border-b border-border-subtle p-6"
           >
             <img
               src={creativeThumb}
@@ -31,11 +31,11 @@ export function CreativeReview() {
               className="size-10 shrink-0 rounded-md object-cover"
             />
             <div className="flex flex-1 flex-col items-start gap-1 text-sm font-medium min-w-0">
-              <p className="w-full text-foreground">{item.name}</p>
-              <p className="w-full text-muted-foreground">{item.creator}</p>
+              <p className="w-full text-fg-default">{item.name}</p>
+              <p className="w-full text-fg-muted">{item.creator}</p>
             </div>
             <p
-              className={`shrink-0 text-sm font-medium ${item.urgent ? "text-destructive" : "text-muted-foreground"}`}
+              className={`shrink-0 text-sm font-medium ${item.urgent ? "text-status-errorfg" : "text-fg-muted"}`}
             >
               {item.status}
             </p>

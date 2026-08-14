@@ -11,18 +11,18 @@ import { ContentCalendar } from "../components/home/ContentCalendar";
 
 export function Home() {
   return (
-    <div className="min-h-svh bg-background">
+    <div className="min-h-svh bg-bg-canvas">
       <TopNav />
       <div className="flex">
         <Sidebar />
         <main className="flex min-h-[calc(100svh-4rem)] flex-1 flex-col items-start">
           <div className="flex w-full items-start gap-6 px-8 py-10">
-            <h1 className="flex-1 text-5xl leading-[48px] font-semibold tracking-[-1.5px] text-foreground">
+            <h1 className="flex-1 text-5xl leading-[48px] font-semibold tracking-[-1.5px] text-fg-default">
               Welcome back, John!
             </h1>
             <button
               type="button"
-              className="flex min-h-9 shrink-0 items-center justify-center gap-2 bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+              className="flex min-h-9 shrink-0 items-center justify-center gap-2 bg-accent-primary px-4 py-2 text-sm font-medium text-gray-0 hover:bg-accent-primaryhover"
             >
               <MessageSquareText className="size-4" />
               Open Chat

@@ -31,7 +31,7 @@ function PriceBracketOption({
             : "border-white/25"
         }`}
       />
-      <span className="text-[17px] text-muted-foreground">{label}</span>
+      <span className="text-[17px] text-fg-muted">{label}</span>
     </button>
   );
 }
@@ -48,7 +48,7 @@ function VisualIdentityTile({ onRemove }: { onRemove: () => void }) {
         type="button"
         aria-label="Remove image"
         onClick={onRemove}
-        className="absolute -right-2 -top-2 flex items-center justify-center rounded-full bg-foreground p-1 text-background"
+        className="absolute -right-2 -top-2 flex items-center justify-center rounded-full bg-fg-default p-1 text-bg-canvas"
       >
         <X className="size-2.5" />
       </button>
@@ -68,7 +68,7 @@ export function AlmostThereForm() {
         <span className="flex items-center bg-brand-500/50 p-3 text-base font-light text-brand-400">
           02
         </span>
-        <span className="flex items-center bg-white/15 p-3 text-sm text-foreground">
+        <span className="flex items-center bg-white/15 p-3 text-sm text-fg-default">
           Almost there... Just need a few more details...
         </span>
       </div>
@@ -77,7 +77,7 @@ export function AlmostThereForm() {
         <div className="flex items-center gap-11 bg-white/5 p-8">
           <div className="flex w-[449px] flex-col gap-11">
             <div className="flex w-full flex-col gap-4">
-              <p className="text-[17px] font-medium text-muted-foreground">
+              <p className="text-[17px] font-medium text-fg-muted">
                 Price Bracket
               </p>
               <div className="flex h-[123px] w-full items-center gap-[15px]">
@@ -93,18 +93,18 @@ export function AlmostThereForm() {
             </div>
 
             <div className="flex h-[203px] w-full flex-col gap-4">
-              <p className="text-[17px] font-medium text-muted-foreground">
+              <p className="text-[17px] font-medium text-fg-muted">
                 Brand USP
               </p>
               <textarea
                 placeholder="Lorem upsumm.."
-                className="h-full w-full resize-y border border-brand-500 p-3 text-[17px] text-muted-foreground outline-none placeholder:text-muted-foreground"
+                className="h-full w-full resize-y border border-brand-500 p-3 text-[17px] text-fg-muted outline-none placeholder:text-fg-muted"
               />
             </div>
           </div>
 
           <div className="flex h-full w-[416px] flex-col gap-4">
-            <p className="text-[17px] font-medium text-muted-foreground">
+            <p className="text-[17px] font-medium text-fg-muted">
               Visual Identity
             </p>
             <div className="grid flex-1 grid-cols-2 gap-3 border border-white/25 p-3">
@@ -118,7 +118,7 @@ export function AlmostThereForm() {
               ))}
               <button
                 type="button"
-                className={`col-span-2 flex items-center justify-center gap-2 border-[1.5px] border-white/25 px-5 py-2.5 text-foreground hover:border-white/40 ${
+                className={`col-span-2 flex items-center justify-center gap-2 border-[1.5px] border-white/25 px-5 py-2.5 text-fg-default hover:border-white/40 ${
                   images.length === 0 ? "row-span-2" : ""
                 }`}
                 onClick={() => setImages((prev) => [...prev, Date.now()])}
@@ -132,14 +132,14 @@ export function AlmostThereForm() {
         <div className="flex w-full items-start">
           <Link
             to="/new-campaign/step-1"
-            className="flex flex-1 items-center justify-center gap-6 bg-white/10 py-6 text-[17px] font-semibold text-muted-foreground hover:bg-white/15"
+            className="flex flex-1 items-center justify-center gap-6 bg-white/10 py-6 text-[17px] font-semibold text-fg-muted hover:bg-white/15"
           >
             <ArrowLeft className="size-5" />
             Previous
           </Link>
           <Link
             to="/new-campaign/step-3"
-            className="flex flex-1 items-center justify-center gap-6 bg-white/25 py-6 text-[17px] font-semibold text-foreground hover:bg-white/30"
+            className="flex flex-1 items-center justify-center gap-6 bg-white/25 py-6 text-[17px] font-semibold text-fg-default hover:bg-white/30"
           >
             Next
             <ArrowRight className="size-5" />

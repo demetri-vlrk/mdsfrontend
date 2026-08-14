@@ -18,7 +18,7 @@ export function GalleryImageCard({
       onClick={onImageClick}
       role={onImageClick ? "button" : undefined}
       tabIndex={onImageClick ? 0 : undefined}
-      className={`relative flex w-full flex-col items-start justify-end overflow-hidden border border-border p-6 ${onImageClick ? "cursor-pointer" : ""} ${className}`}
+      className={`relative flex w-full flex-col items-start justify-end overflow-hidden border border-border-subtle p-6 ${onImageClick ? "cursor-pointer" : ""} ${className}`}
     >
       <img
         src={image}
@@ -30,7 +30,7 @@ export function GalleryImageCard({
         <div className="flex flex-1 items-start gap-1.5">
           <button
             type="button"
-            className="flex min-h-9 items-center justify-center gap-2 rounded-full border border-white/80 bg-white/10 px-4 py-2 text-sm font-medium text-foreground shadow-xs"
+            className="flex min-h-9 items-center justify-center gap-2 rounded-full border border-white/80 bg-white/10 px-4 py-2 text-sm font-medium text-fg-default shadow-xs"
           >
             {isHero && <Crown className="size-4" />}
             {label}
@@ -39,7 +39,7 @@ export function GalleryImageCard({
             type="button"
             aria-label="Edit tags"
             onClick={(e) => e.stopPropagation()}
-            className="flex min-h-9 items-center justify-center rounded-full border border-white/80 bg-white/10 px-3 py-2 text-foreground shadow-xs hover:bg-white/20"
+            className="flex min-h-9 items-center justify-center rounded-full border border-white/80 bg-white/10 px-3 py-2 text-fg-default shadow-xs hover:bg-white/20"
           >
             <Tag className="size-4" />
           </button>
@@ -48,7 +48,7 @@ export function GalleryImageCard({
           type="button"
           aria-label="Delete image"
           onClick={(e) => e.stopPropagation()}
-          className="flex size-6 shrink-0 items-center justify-center text-foreground hover:text-destructive"
+          className="flex size-6 shrink-0 items-center justify-center text-fg-default hover:text-status-errorfg"
         >
           <Trash2 className="size-6" />
         </button>

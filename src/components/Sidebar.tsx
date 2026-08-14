@@ -49,15 +49,15 @@ function SidebarLink({ label, icon: Icon, to }: NavItem) {
 
 export function Sidebar() {
   return (
-    <aside className="flex h-[calc(100svh-4rem)] w-[259px] shrink-0 flex-col items-start border-r border-border bg-sidebar px-4 py-3">
-      <div className="flex w-full items-center gap-2 rounded-lg border border-border bg-white/5 px-3 py-[7.5px] shadow-xs">
-        <span className="flex-1 text-sm text-muted-foreground">Search</span>
+    <aside className="flex h-[calc(100svh-4rem)] w-[259px] shrink-0 flex-col items-start border-r border-border-subtle bg-sidebar px-4 py-3">
+      <div className="flex w-full items-center gap-2 rounded-lg border border-border-subtle bg-white/5 px-3 py-[7.5px] shadow-xs">
+        <span className="flex-1 text-sm text-fg-muted">Search</span>
         <div className="flex items-center gap-1">
-          <kbd className="rounded bg-white/5 px-1 py-0.5 text-xs text-foreground">
+          <kbd className="rounded bg-white/5 px-1 py-0.5 text-xs text-fg-default">
             Ctrl
           </kbd>
-          <span className="text-xs text-muted-foreground">+</span>
-          <kbd className="rounded bg-white/5 px-1 py-0.5 text-xs text-foreground">
+          <span className="text-xs text-fg-muted">+</span>
+          <kbd className="rounded bg-white/5 px-1 py-0.5 text-xs text-fg-default">
             K
           </kbd>
         </div>

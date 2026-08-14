@@ -12,23 +12,23 @@ const DAYS = [
 
 export function ContentCalendar() {
   return (
-    <div className="flex w-full flex-1 flex-col items-start gap-6 border border-border px-8 py-10">
+    <div className="flex w-full flex-1 flex-col items-start gap-6 border border-border-subtle px-8 py-10">
       <SectionHeader title="Content Calendar" />
-      <div className="flex w-full items-start border border-border">
+      <div className="flex w-full items-start border border-border-subtle">
         {DAYS.map((day, i) => (
           <div
             key={i}
             className={`flex flex-1 flex-col items-center gap-2 p-4 ${
-              i > 0 ? "border-l border-border" : ""
-            } ${day.active ? "bg-primary text-primary-foreground" : ""}`}
+              i > 0 ? "border-l border-border-subtle" : ""
+            } ${day.active ? "bg-accent-primary text-gray-0" : ""}`}
           >
             <p
-              className={`text-xs ${day.active ? "" : "text-muted-foreground"}`}
+              className={`text-xs ${day.active ? "" : "text-fg-muted"}`}
             >
               {day.label}
             </p>
             <p
-              className={`text-sm ${day.active ? "" : "text-foreground"}`}
+              className={`text-sm ${day.active ? "" : "text-fg-default"}`}
             >
               {day.date}
             </p>

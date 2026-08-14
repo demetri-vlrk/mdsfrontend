@@ -19,7 +19,7 @@ export function CircularProgress({
   return (
     <div className="flex flex-col items-center gap-3 p-3">
       {topLabel && (
-        <p className="text-xs text-muted-foreground">{topLabel}</p>
+        <p className="text-xs text-fg-muted">{topLabel}</p>
       )}
       <div className="relative size-[97.719px]">
         <svg
@@ -33,7 +33,7 @@ export function CircularProgress({
             r={RADIUS}
             fill="none"
             strokeWidth={STROKE}
-            className="stroke-secondary"
+            className="stroke-border-subtle"
           />
           <circle
             cx={SIZE / 2}
@@ -44,16 +44,16 @@ export function CircularProgress({
             strokeLinecap="round"
             strokeDasharray={CIRCUMFERENCE}
             strokeDashoffset={offset}
-            className="stroke-foreground"
+            className="stroke-fg-default"
           />
         </svg>
-        <p className="absolute inset-0 flex items-center justify-center text-xs font-semibold text-foreground">
+        <p className="absolute inset-0 flex items-center justify-center text-xs font-semibold text-fg-default">
           {percent}%
         </p>
       </div>
-      {label && <p className="text-sm text-foreground">{label}</p>}
+      {label && <p className="text-sm text-fg-default">{label}</p>}
       {bottomLabel && (
-        <p className="text-sm font-bold text-foreground">{bottomLabel}</p>
+        <p className="text-sm font-bold text-fg-default">{bottomLabel}</p>
       )}
     </div>
   );

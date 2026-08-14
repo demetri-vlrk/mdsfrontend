@@ -43,7 +43,7 @@ export function AllImages() {
   const [editingImage, setEditingImage] = useState<{ image: string; label: string } | null>(null);
 
   return (
-    <div className="min-h-svh bg-background">
+    <div className="min-h-svh bg-bg-canvas">
       <TopNav />
       <div className="flex">
         <Sidebar />
@@ -52,12 +52,12 @@ export function AllImages() {
             <div className="flex flex-1 flex-col items-start gap-6">
               <Link
                 to="/campaigns/op-1"
-                className="flex min-h-9 items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground"
+                className="flex min-h-9 items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-fg-muted hover:text-fg-default"
               >
                 <ChevronLeft className="size-4" />
                 Back to campaign
               </Link>
-              <h1 className="text-7xl leading-none font-semibold tracking-[-1.5px] text-foreground">
+              <h1 className="text-7xl leading-none font-semibold tracking-[-1.5px] text-fg-default">
                 All Images
               </h1>
               <div className="flex w-full items-center gap-3">
@@ -65,14 +65,14 @@ export function AllImages() {
                   <button
                     key={filter}
                     type="button"
-                    className="flex min-h-9 items-center justify-center rounded-full bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground hover:bg-secondary/80"
+                    className="flex min-h-9 items-center justify-center rounded-full bg-bg-subtle px-4 py-2 text-sm font-medium text-fg-default hover:bg-bg-elevated"
                   >
                     {filter}
                   </button>
                 ))}
                 <button
                   type="button"
-                  className="flex min-h-9 items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground"
+                  className="flex min-h-9 items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium text-fg-muted hover:text-fg-default"
                 >
                   <ListFilter className="size-4" />
                   Filter
@@ -83,14 +83,14 @@ export function AllImages() {
               <button
                 type="button"
                 onClick={() => setIsChatOpen(true)}
-                className="flex min-h-9 items-center justify-center gap-2 bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+                className="flex min-h-9 items-center justify-center gap-2 bg-accent-primary px-4 py-2 text-sm font-medium text-gray-0 hover:bg-accent-primaryhover"
               >
                 <MessageSquareText className="size-4" />
                 Open Chat
               </button>
               <button
                 type="button"
-                className="flex min-h-9 items-center justify-center gap-2 rounded-lg bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground hover:bg-secondary/80"
+                className="flex min-h-9 items-center justify-center gap-2 rounded-lg bg-bg-subtle px-4 py-2 text-sm font-medium text-fg-default hover:bg-bg-elevated"
               >
                 <Plus className="size-4" />
                 Upload Image
