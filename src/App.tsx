@@ -12,6 +12,7 @@ import { NewCampaignStep2 } from "./pages/NewCampaignStep2";
 import { NewCampaignStep3 } from "./pages/NewCampaignStep3";
 import { NewCampaignAnalyzing } from "./pages/NewCampaignAnalyzing";
 import { CampaignResults } from "./pages/CampaignResults";
+import { SiteMap } from "./pages/SiteMap";
 import { IconGradientDefs } from "./components/campaign/IconGradientDefs";
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path="/new-campaign/analyzing" element={<NewCampaignAnalyzing />} />
         <Route path="/new-campaign/results" element={<CampaignResults />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/site-map" element={<SiteMap />} />
       </Routes>
     </>
   );
