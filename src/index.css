@@ -7,6 +7,13 @@
 @import "./theme-vars.css";
 @import "./theme.css";
 
+/* This app's dark canvas is true black, not mbs-frontend's gray-900 (which is navy-tinted) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --semantic-color-bg-canvas: #0a0a0a;
+  }
+}
+
 @theme {
   --font-sans: "Geist Sans", ui-sans-serif, system-ui, sans-serif;
 
