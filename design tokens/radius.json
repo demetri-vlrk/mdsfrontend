@@ -1,0 +1,44 @@
+{
+  "radius": {
+    "0": {
+      "$type": "number",
+      "$value": 0
+    },
+    "1": {
+      "$type": "number",
+      "$value": 2
+    },
+    "2": {
+      "$type": "number",
+      "$value": 4
+    },
+    "3": {
+      "$type": "number",
+      "$value": 8
+    },
+    "full": {
+      "$type": "number",
+      "$value": 9999
+    },
+    "surface": {
+      "$type": "number",
+      "$value": "{radius.1}"
+    },
+    "control": {
+      "$type": "number",
+      "$value": "{radius.2}"
+    },
+    "badge": {
+      "$type": "number",
+      "$value": "{radius.full}"
+    },
+    "avatar": {
+      "$type": "number",
+      "$value": "{radius.full}"
+    },
+    "table": {
+      "$type": "number",
+      "$value": "{radius.0}"
+    }
+  }
+}

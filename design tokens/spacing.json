@@ -1,0 +1,128 @@
+{
+  "spacing": {
+    "0": {
+      "$type": "number",
+      "$value": 0
+    },
+    "1": {
+      "$type": "number",
+      "$value": 4
+    },
+    "2": {
+      "$type": "number",
+      "$value": 8
+    },
+    "3": {
+      "$type": "number",
+      "$value": 12
+    },
+    "4": {
+      "$type": "number",
+      "$value": 16
+    },
+    "5": {
+      "$type": "number",
+      "$value": 24
+    },
+    "6": {
+      "$type": "number",
+      "$value": 32
+    },
+    "7": {
+      "$type": "number",
+      "$value": 40
+    },
+    "8": {
+      "$type": "number",
+      "$value": 48
+    },
+    "9": {
+      "$type": "number",
+      "$value": 56
+    },
+    "10": {
+      "$type": "number",
+      "$value": 64
+    },
+    "space": {
+      "inline": {
+        "xs": {
+          "$type": "number",
+          "$value": "{spacing.2}"
+        },
+        "sm": {
+          "$type": "number",
+          "$value": "{spacing.3}"
+        },
+        "md": {
+          "$type": "number",
+          "$value": "{spacing.4}"
+        },
+        "lg": {
+          "$type": "number",
+          "$value": "{spacing.5}"
+        }
+      },
+      "stack": {
+        "xxs": {
+          "$type": "number",
+          "$value": "{spacing.1}"
+        },
+        "xs": {
+          "$type": "number",
+          "$value": "{spacing.2}"
+        },
+        "sm": {
+          "$type": "number",
+          "$value": "{spacing.3}"
+        },
+        "md": {
+          "$type": "number",
+          "$value": "{spacing.4}"
+        },
+        "lg": {
+          "$type": "number",
+          "$value": "{spacing.6}"
+        },
+        "xl": {
+          "$type": "number",
+          "$value": "{spacing.8}"
+        }
+      },
+      "card": {
+        "padding": {
+          "$type": "number",
+          "$value": "{spacing.5}"
+        },
+        "gap": {
+          "$type": "number",
+          "$value": "{spacing.4}"
+        }
+      },
+      "button": {
+        "x": {
+          "$type": "number",
+          "$value": "{spacing.4}"
+        },
+        "y": {
+          "$type": "number",
+          "$value": "{spacing.2}"
+        }
+      },
+      "input": {
+        "x": {
+          "$type": "number",
+          "$value": "{spacing.3}"
+        },
+        "y": {
+          "$type": "number",
+          "$value": "{spacing.2}"
+        },
+        "gapIcon": {
+          "$type": "number",
+          "$value": "{spacing.2}"
+        }
+      }
+    }
+  }
+}
