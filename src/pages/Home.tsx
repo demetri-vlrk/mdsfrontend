@@ -15,7 +15,7 @@ export function Home() {
       <TopNav />
       <div className="flex">
         <Sidebar />
-        <main className="flex min-h-[calc(100svh-4rem)] flex-1 flex-col items-start">
+        <main className="flex min-h-[calc(100svh-64px)] flex-1 flex-col items-start">
           <div className="flex w-full items-start gap-6 px-8 py-10">
             <h1 className="flex-1 text-5xl leading-[48px] font-semibold tracking-[-1.5px] text-fg-default">
               Welcome back, John!

@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { ArrowLeft, ArrowRight, Plus, X } from "lucide-react";
-import { Link } from "react-router-dom";
 import visualIdentityThumb from "../../assets/visual-identity-thumb.png";
+import { StepBadge } from "../ui/StepBadge";
+import { FieldLabel } from "../ui/FieldLabel";
+import { TextAreaField } from "../ui/TextAreaField";
+import { StepFooterButton } from "../ui/StepFooterButton";
 
 const PRICE_BRACKETS = ["Comsumer", "Premium", "Luxury"] as const;
+const MAX_VISUAL_IDENTITY_IMAGES = 6;
 
 function PriceBracketOption({
   label,
@@ -38,7 +42,7 @@ function PriceBracketOption({
 
 function VisualIdentityTile({ onRemove }: { onRemove: () => void }) {
   return (
-    <div className="relative border border-[#494c51] p-1.5">
+    <div className="relative aspect-square border border-[#494c51] p-1.5">
       <img
         src={visualIdentityThumb}
         alt=""
@@ -64,22 +68,13 @@ export function AlmostThereForm() {
 
   return (
     <div className="flex flex-col items-center gap-6">
-      <div className="flex items-stretch">
-        <span className="flex items-center bg-brand-500/50 p-3 text-base font-light text-brand-400">
-          02
-        </span>
-        <span className="flex items-center bg-white/15 p-3 text-sm text-fg-default">
-          Almost there... Just need a few more details...
-        </span>
-      </div>
+      <StepBadge step="02" label="Almost there... Just need a few more details..." />
 
       <div className="flex flex-col items-start">
-        <div className="flex items-center gap-11 bg-white/5 p-8">
+        <div className="flex items-stretch gap-11 bg-white/5 p-8">
           <div className="flex w-[449px] flex-col gap-11">
             <div className="flex w-full flex-col gap-4">
-              <p className="text-[17px] font-medium text-fg-muted">
-                Price Bracket
-              </p>
+              <FieldLabel>Price Bracket</FieldLabel>
               <div className="flex h-[123px] w-full items-center gap-[15px]">
                 {PRICE_BRACKETS.map((label) => (
                   <PriceBracketOption
@@ -92,21 +87,15 @@ export function AlmostThereForm() {
               </div>
             </div>
 
-            <div className="flex h-[203px] w-full flex-col gap-4">
-              <p className="text-[17px] font-medium text-fg-muted">
-                Brand USP
-              </p>
-              <textarea
-                placeholder="Lorem upsumm.."
-                className="h-full w-full resize-y border border-brand-500 p-3 text-[17px] text-fg-muted outline-none placeholder:text-fg-muted"
-              />
-            </div>
+            <TextAreaField
+              label="Brand USP"
+              placeholder="Lorem upsumm.."
+              variant="accent"
+            />
           </div>
 
-          <div className="flex h-full w-[416px] flex-col gap-4">
-            <p className="text-[17px] font-medium text-fg-muted">
-              Visual Identity
-            </p>
+          <div className="flex w-[416px] flex-col gap-4">
+            <FieldLabel>Visual Identity</FieldLabel>
             <div className="grid flex-1 grid-cols-2 gap-3 border border-white/25 p-3">
               {images.map((id) => (
                 <VisualIdentityTile
@@ -116,34 +105,35 @@ export function AlmostThereForm() {
                   }
                 />
               ))}
-              <button
-                type="button"
-                className={`col-span-2 flex items-center justify-center gap-2 border-[1.5px] border-white/25 px-5 py-2.5 text-fg-default hover:border-white/40 ${
-                  images.length === 0 ? "row-span-2" : ""
-                }`}
-                onClick={() => setImages((prev) => [...prev, Date.now()])}
-              >
-                <Plus className="size-5" />
-              </button>
+              {images.length < MAX_VISUAL_IDENTITY_IMAGES && (
+                <button
+                  type="button"
+                  className="flex aspect-square flex-col items-center justify-center gap-2 border-[1.5px] border-white/25 px-[20px] py-2.5 text-fg-default hover:border-white/40"
+                  onClick={() => setImages((prev) => [...prev, Date.now()])}
+                >
+                  <Plus className="size-[20px]" />
+                </button>
+              )}
             </div>
           </div>
         </div>
 
         <div className="flex w-full items-start">
-          <Link
+          <StepFooterButton
             to="/new-campaign/step-1"
-            className="flex flex-1 items-center justify-center gap-6 bg-white/10 py-6 text-[17px] font-semibold text-fg-muted hover:bg-white/15"
-          >
-            <ArrowLeft className="size-5" />
-            Previous
-          </Link>
-          <Link
+            label="Previous"
+            icon={ArrowLeft}
+            iconPosition="left"
+            tone="ghost-muted"
+            width="half"
+          />
+          <StepFooterButton
             to="/new-campaign/step-3"
-            className="flex flex-1 items-center justify-center gap-6 bg-white/25 py-6 text-[17px] font-semibold text-fg-default hover:bg-white/30"
-          >
-            Next
-            <ArrowRight className="size-5" />
-          </Link>
+            label="Next"
+            icon={ArrowRight}
+            tone="solid"
+            width="half"
+          />
         </div>
       </div>
     </div>

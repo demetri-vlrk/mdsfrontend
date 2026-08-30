@@ -8,7 +8,6 @@ import { PropositionRow } from "../components/results/PropositionRow";
 import { TimelineBenchmarkRow } from "../components/results/TimelineBenchmarkRow";
 import { KpiDiagnosticsRow } from "../components/results/KpiDiagnosticsRow";
 import { PersonasTensionRow } from "../components/results/PersonasTensionRow";
-import headerGlow from "../assets/campaign-header-glow.png";
 
 export function CampaignResults() {
   return (
@@ -17,25 +16,22 @@ export function CampaignResults() {
       <div className="flex">
         <Sidebar />
         <div className="relative flex flex-1 overflow-hidden">
-          <img
-            src={headerGlow}
-            alt=""
-            aria-hidden
-            className="pointer-events-none absolute top-0 right-0 h-[460px] w-auto max-w-none saturate-150 brightness-125"
-          />
-          <main className="flex min-h-[calc(100svh-4rem)] flex-1 flex-col items-start">
+          <main className="flex min-h-[calc(100svh-64px)] flex-1 flex-col items-start">
             <ResultsHeader />
 
-            <div className="flex w-full flex-col items-start gap-8 py-8">
-              <div className="w-full px-8">
-                <StartPlanningBanner />
-              </div>
-
+            <div className="flex w-full flex-col items-start gap-5 py-8">
               <MarketPositioningHeader />
-              <PropositionRow />
-              <TimelineBenchmarkRow />
-              <KpiDiagnosticsRow />
-              <PersonasTensionRow />
+
+              <div className="flex w-full flex-col items-start gap-0">
+                <div className="w-full px-8">
+                  <StartPlanningBanner />
+                </div>
+
+                <PropositionRow />
+                <TimelineBenchmarkRow />
+                <KpiDiagnosticsRow />
+                <PersonasTensionRow />
+              </div>
             </div>
           </main>
           <UtilityRail />

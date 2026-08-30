@@ -20,7 +20,7 @@ export function CampaignDetail() {
             aria-hidden
             className="pointer-events-none absolute top-0 right-0 h-[460px] w-auto max-w-none saturate-150 brightness-125"
           />
-          <main className="flex min-h-[calc(100svh-4rem)] flex-1 flex-col items-start">
+          <main className="flex min-h-[calc(100svh-64px)] flex-1 flex-col items-start">
             <div className="flex w-full flex-col items-start">
               <div className="flex w-full items-start gap-6 px-8 py-10">
                 <h1 className="flex-1 text-7xl leading-none font-semibold tracking-[-1.5px] text-fg-default">

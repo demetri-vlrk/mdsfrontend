@@ -1,20 +1,30 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ArrowRight, ImagePlus } from "lucide-react";
-import prismGlow from "../../assets/prism-glow.png";
+import { Prism } from "../Prism";
 
 export function NewCampaignHero() {
   const [url, setUrl] = useState("alphalpha.com");
+  const navigate = useNavigate();
 
   return (
-    <div className="relative flex w-full flex-1 flex-col items-center overflow-hidden pt-16">
-      <img
-        src={prismGlow}
-        alt=""
+    <div className="relative flex w-full flex-1 flex-col items-center overflow-hidden pt-16 [zoom:1.08]">
+      <div
         aria-hidden
-        className="animate-prism-glow pointer-events-none w-full max-w-[1100px] shrink-0 mix-blend-screen"
-      />
+        className="pointer-events-none aspect-video w-full max-w-[1100px] shrink-0 mix-blend-screen"
+      >
+        <Prism
+          animationType="rotate"
+          timeScale={0.3}
+          height={3.5}
+          baseWidth={5.5}
+          scale={1.6}
+          noise={0.03}
+          glow={1}
+        />
+      </div>
 
-      <div className="relative z-10 -mt-44 flex w-full flex-col items-center gap-8 px-4 pb-20">
+      <div className="relative z-10 -mt-16 flex w-full flex-col items-center gap-8 px-4 pb-20">
         <div className="flex flex-col items-center gap-2.5 text-center">
           <h1 className="max-w-[540px] text-[64px] leading-none font-medium tracking-[-1.28px] text-fg-default">
             Build your whole campaign at shot!
@@ -30,7 +40,10 @@ export function NewCampaignHero() {
 
         <div className="flex w-full max-w-[575px] flex-col items-center gap-4">
           <form
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={(e) => {
+              e.preventDefault();
+              navigate("/new-campaign/step-1");
+            }}
             className="gradient-border flex w-full items-center justify-between p-3"
           >
             <div className="flex flex-1 items-center gap-1 text-xl">

@@ -9,25 +9,23 @@ type NavItem = {
 };
 
 const mainItems: NavItem[] = [
-  { label: "Projects", icon: SquareDashed, to: "/projects" },
-  { label: "Team", icon: SquareDashed },
+  { label: "Campaigns", icon: SquareDashed, to: "/projects" },
+  { label: "Billing", icon: SquareDashed },
   { label: "Usage", icon: SquareDashed },
   { label: "Admin", icon: SquareDashed },
 ];
 
 const favouriteItems: NavItem[] = [
-  { label: "Projects", icon: SquareDashed, to: "/projects" },
-  { label: "Team", icon: SquareDashed },
-  { label: "Usage", icon: SquareDashed },
-  { label: "Admin", icon: SquareDashed },
+  { label: "OP-1", icon: SquareDashed, to: "/campaigns/op-1" },
+  { label: "Campaign 02", icon: SquareDashed },
 ];
 
 function SidebarLink({ label, icon: Icon, to }: NavItem) {
   const className =
-    "flex h-8 w-full items-center gap-2 rounded-md px-3 py-1 text-left text-sm text-sidebar-foreground hover:bg-white/5";
+    "flex h-[32px] w-full items-center gap-[8px] rounded-[6px] px-[12px] text-left text-[14px] text-sidebar-foreground hover:bg-white/5";
   const content = (
     <>
-      <Icon className="size-4 shrink-0" />
+      <Icon className="size-[16px] shrink-0" />
       <span className="min-w-0 flex-1 truncate">{label}</span>
     </>
   );
@@ -47,33 +45,30 @@ function SidebarLink({ label, icon: Icon, to }: NavItem) {
   );
 }
 
+// From the MBS Figma design system (node 281:18063). Figma's version is
+// light-themed (bg #fafafa) — kept dark here per this app's existing
+// convention, unlike TopNav which switched to match Figma's light chrome.
 export function Sidebar() {
   return (
-    <aside className="flex h-[calc(100svh-4rem)] w-[259px] shrink-0 flex-col items-start border-r border-border-subtle bg-sidebar px-4 py-3">
-      <div className="flex w-full items-center gap-2 rounded-lg border border-border-subtle bg-white/5 px-3 py-[7.5px] shadow-xs">
-        <span className="flex-1 text-sm text-fg-muted">Search</span>
-        <div className="flex items-center gap-1">
-          <kbd className="rounded bg-white/5 px-1 py-0.5 text-xs text-fg-default">
+    <aside className="flex h-[calc(100svh-64px)] w-[300px] shrink-0 flex-col items-start border-r border-border-subtle bg-sidebar px-[16px] py-[12px]">
+      <div className="flex min-h-[36px] w-full items-center gap-[8px] border border-border-subtle bg-white/5 px-[12px] py-[7.5px] shadow-xs">
+        <span className="flex-1 text-[14px] text-fg-muted">Search</span>
+        <div className="flex items-center gap-[4px]">
+          <kbd className="rounded-[4px] bg-bg-subtle px-[4px] py-[2px] font-sans text-[12px] text-fg-default">
             Ctrl
           </kbd>
-          <span className="text-xs text-fg-muted">+</span>
-          <kbd className="rounded bg-white/5 px-1 py-0.5 text-xs text-fg-default">
+          <span className="text-[12px] text-fg-muted">+</span>
+          <kbd className="rounded-[4px] bg-bg-subtle px-[4px] py-[2px] font-sans text-[12px] text-fg-default">
             K
           </kbd>
         </div>
       </div>
 
-      <div className="h-4 w-full" />
+      <div className="h-[16px] w-full" />
 
-      <Link
-        to="/home"
-        className="flex h-8 w-full items-center gap-2 rounded-md px-3 py-1 text-left text-sm text-sidebar-foreground hover:bg-white/5"
-      >
-        <House className="size-4 shrink-0" />
-        <span className="flex-1">Home</span>
-      </Link>
+      <SidebarLink label="Home" icon={House} to="/home" />
 
-      <div className="h-4 w-full" />
+      <div className="h-[16px] w-full" />
 
       <nav className="flex w-full flex-col items-start">
         {mainItems.map((item) => (
@@ -81,13 +76,11 @@ export function Sidebar() {
         ))}
       </nav>
 
-      <div className="h-4 w-full" />
+      <div className="h-[16px] w-full" />
 
       <div className="flex w-full flex-col items-start">
-        <div className="flex w-full items-center px-3 py-2">
-          <p className="flex-1 text-xs font-semibold text-sidebar-muted">
-            Favourites
-          </p>
+        <div className="flex w-full items-center px-[12px] py-[8px]">
+          <p className="flex-1 text-[12px] font-semibold text-sidebar-muted">Favourites</p>
         </div>
         {favouriteItems.map((item) => (
           <SidebarLink key={item.label} {...item} />

@@ -17,7 +17,7 @@ export function BrandDna() {
       <TopNav />
       <div className="flex">
         <Sidebar />
-        <main className="flex min-h-[calc(100svh-4rem)] flex-1 flex-col items-start">
+        <main className="flex min-h-[calc(100svh-64px)] flex-1 flex-col items-start">
           <div className="flex w-full items-start gap-6 px-8 py-10">
             <div className="flex flex-1 flex-col items-start gap-6">
               <Link

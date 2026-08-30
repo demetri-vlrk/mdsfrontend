@@ -8,7 +8,7 @@ export function NewCampaign() {
       <TopNav />
       <div className="flex">
         <Sidebar />
-        <main className="flex min-h-[calc(100svh-4rem)] flex-1 flex-col">
+        <main className="flex min-h-[calc(100svh-64px)] flex-1 flex-col">
           <NewCampaignHero />
         </main>
       </div>

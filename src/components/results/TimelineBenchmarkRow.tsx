@@ -41,7 +41,7 @@ export function TimelineBenchmarkRow() {
         <CardHeading icon={Package} title="Competitive Benchmark" />
         <div className="grid grid-cols-2 gap-2.5">
           {COMPETITORS.map((c, i) => (
-            <div key={i} className="flex gap-4 bg-bg-subtle p-4">
+            <div key={i} className="flex h-[170px] gap-2.5 bg-[#1a1a1a] p-4">
               <div className="flex w-[191px] shrink-0 flex-col justify-between gap-2.5">
                 <p className="text-[17px] font-medium text-fg-default">
                   {c.name}
@@ -55,7 +55,7 @@ export function TimelineBenchmarkRow() {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-1 flex-col gap-2.5">
+              <div className="flex w-[191px] shrink-0 flex-col gap-2.5">
                 <div className="flex flex-col gap-1">
                   <p className="text-xs text-fg-muted">
                     Key Advantage

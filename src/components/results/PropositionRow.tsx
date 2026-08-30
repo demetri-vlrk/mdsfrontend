@@ -15,18 +15,18 @@ const LADDER_STEPS = [
 export function PropositionRow() {
   return (
     <div className="flex w-full items-stretch px-8">
-      <div className="relative flex flex-1 flex-col items-start justify-between border border-border-subtle p-6">
+      <div className="relative flex flex-1 flex-col items-start justify-between border border-border-subtle p-5">
         <img
           src={propositionGlow}
           alt=""
           aria-hidden
-          className="pointer-events-none absolute top-0 left-[40%] h-[320px] w-[320px] -translate-x-1/2 -translate-y-1/2 mix-blend-plus-lighter"
+          className="pointer-events-none absolute left-[49%] top-[28.5%] h-[98%] w-[50%] mix-blend-plus-lighter"
         />
         <img
           src={chessPiece}
           alt=""
           aria-hidden
-          className="pointer-events-none absolute top-6 right-6 h-[350px] w-auto mix-blend-lighten"
+          className="pointer-events-none absolute right-[3%] top-[6%] h-[88%] w-auto mix-blend-lighten"
         />
         <div className="relative flex max-w-[410px] flex-col gap-1">
           <p className="text-5xl leading-[48px] font-semibold tracking-[-1.5px] text-fg-default">

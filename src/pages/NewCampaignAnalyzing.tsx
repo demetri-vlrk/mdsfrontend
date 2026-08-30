@@ -8,7 +8,7 @@ export function NewCampaignAnalyzing() {
       <TopNav />
       <div className="flex">
         <Sidebar />
-        <main className="flex min-h-[calc(100svh-4rem)] flex-1">
+        <main className="flex min-h-[calc(100svh-64px)] flex-1">
           <AnalyzingScreen />
         </main>
       </div>

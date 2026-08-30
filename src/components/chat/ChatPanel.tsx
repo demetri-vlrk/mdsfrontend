@@ -15,7 +15,7 @@ const TAGS = [
 
 export function ChatPanel({ onClose }: { onClose: () => void }) {
   return (
-    <aside className="flex h-[calc(100svh-4rem)] w-[524px] shrink-0 flex-col items-start border-l border-border-subtle bg-sidebar">
+    <aside className="flex h-[calc(100svh-64px)] w-[524px] shrink-0 flex-col items-start border-l border-border-subtle bg-sidebar">
       <div className="flex w-full shrink-0 flex-col items-start border-b border-border-subtle p-6">
         <div className="flex w-full items-center justify-between">
           <p className="text-xl leading-6 font-semibold text-fg-default">

@@ -7,13 +7,13 @@ export function StartPlanningBanner() {
         Ready to start your Campaign?
       </p>
       <div className="flex items-stretch">
-        <span className="flex items-center bg-brand-400 px-4 py-3 text-base text-[#1c1d1f]">
+        <span className="flex items-center bg-brand-400 px-4 py-3 text-base text-fg-default">
           Start Planning Content
         </span>
         <button
           type="button"
           aria-label="Start planning content"
-          className="flex items-center justify-center bg-fg-default p-3 text-bg-canvas hover:opacity-90"
+          className="flex items-center justify-center bg-fg-default p-3 text-brand-900 hover:opacity-90"
         >
           <ArrowRight className="size-4" />
         </button>
